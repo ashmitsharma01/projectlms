@@ -14,9 +14,19 @@ class Student extends Authenticatable
         'user_id',
         'library_id',
         'name',
-        'admission_no',
         'joining_date',
+        'admission_no',
+        'pincode',
+        'address',
         'status',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+    public function userRole()
+    {
+        return $this->hasOne(UserRole::class, 'user_id', 'user_id');
+    }
 }

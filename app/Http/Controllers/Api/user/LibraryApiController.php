@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\user;
 
 use App\Http\Controllers\Api\BaseController;
+use App\Models\City;
 use App\Models\Library;
 use App\Models\User;
 use App\Models\UserRole;
@@ -11,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Validation\Rule;
 
 class LibraryApiController extends BaseController
 {
@@ -19,7 +20,7 @@ class LibraryApiController extends BaseController
     public $res      = [];
 
 
-    public function libraryCreate(Request $request)
+    public function librarySave(Request $request)
     {
         try {
             // Validation
@@ -27,8 +28,17 @@ class LibraryApiController extends BaseController
                 'name'     => 'required|string|max:255',
                 'address'  => 'required|string',
                 'city'     => 'required|string|max:100',
-                'email'     => 'nullable|email|unique:users,email,' . $request->id,
-                'mobile_no'     => 'required|min:10|max:10|unique:users,mobile_no,' . $request->id,
+                'email'      => [
+                    'required',
+                    'email',
+                    Rule::unique('users', 'email')->ignore($request->id)
+                ],
+                'mobile_no'  => [
+                    'required',
+                    'min:10',
+                    'max:10',
+                    Rule::unique('users', 'mobile_no')->ignore($request->id)
+                ],
                 'state'    => 'required|string|max:100',
                 'pincode'  => 'required|string|max:15',
                 'status'   => 'required|in:0,1',
@@ -61,7 +71,12 @@ class LibraryApiController extends BaseController
                 ]
             );
 
-
+            if ($request->city) {
+                $city = City::where('id', $request->city)->value('city');
+            }
+            if($request->id){
+                $existingLibraryCode = Library::where('user_id',$request->id)->value('library_code');
+            }
             $library = Library::updateOrCreate(
                 ['user_id' => $user->id],
                 [
@@ -72,7 +87,11 @@ class LibraryApiController extends BaseController
                     'city'     => $request->city,
                     'state'    => $request->state,
                     'pincode'  => $request->pincode,
-                    'status'   => $request->status
+                    'status'   => $request->status,
+                    'total_seats'   => $request->total_seats,
+                    'library_code' => $request->id
+                        ? ($existingLibraryCode ?? null)
+                        : $this->generateLibraryCode($request->name, $city),
                 ]
             );
 
@@ -90,7 +109,7 @@ class LibraryApiController extends BaseController
         }
     }
 
-    public function getLibrary(Request $request)
+    public function getLibraries(Request $request)
     {
         try {
 
@@ -98,7 +117,7 @@ class LibraryApiController extends BaseController
 
             return response()->json([
                 'status'  => true,
-                'message' => $request->id ? 'Library updated successfully.' : 'Library created successfully.',
+                'message' => 'Library fetched successfully.',
                 'data'    => $libraries
             ], 201);
         } catch (\Exception $e) {
@@ -108,5 +127,44 @@ class LibraryApiController extends BaseController
                 'data'    => null
             ], 500);
         }
+    }
+
+    private function generateLibraryCode($libraryName, $cityName)
+    {
+        // Words to ignore
+        $wordsToIgnore = ['the', 'of'];
+
+        // Split library name into words
+        $words = explode(' ', strtolower($libraryName));
+
+        // Filter meaningful words
+        $filtered = array_filter($words, fn($word) => !in_array($word, $wordsToIgnore));
+
+        // Take first letter of each word, up to 3 letters
+        $prefix = '';
+        $i = 0;
+        foreach ($filtered as $word) {
+            $prefix .= strtoupper(substr($word, 0, 1));
+            $i++;
+            if ($i >= 3) break; // max 3 letters
+        }
+
+        if (!$prefix) $prefix = 'LIB'; // fallback
+
+        // STEP 1: check if code exists
+        if (!Library::where('library_code', $prefix)->exists()) {
+            return $prefix;
+        }
+
+        // STEP 2: add first letter of city
+        $cityLetter = strtoupper(substr($cityName, 0, 1));
+        $prefixWithCity = $prefix . $cityLetter;
+
+        if (!Library::where('library_code', $prefixWithCity)->exists()) {
+            return $prefixWithCity;
+        }
+
+        // STEP 3: add random number 1-9 if still exists
+        return $prefixWithCity . rand(1, 9);
     }
 }

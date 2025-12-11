@@ -13,7 +13,9 @@ class Library extends Authenticatable
     protected $fillable = [
         'admin_id',
         'user_id',
+        'library_code',
         'name',
+        'total_seats',
         'address',
         'city',
         'state',

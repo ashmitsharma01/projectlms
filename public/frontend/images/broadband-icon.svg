@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="78.23" height="78.23" viewBox="0 0 78.23 78.23">
+  <g id="Group_51616" data-name="Group 51616" transform="translate(-0.5 -0.5)">
+    <rect id="Rectangle_19788" data-name="Rectangle 19788" width="11.235" height="11.235" transform="translate(34.006 65.83)" fill="#fff27d"/>
+    <circle id="Ellipse_1714" data-name="Ellipse 1714" cx="27.58" cy="27.58" r="27.58" transform="translate(12.035 2.164)" fill="#96d7ff"/>
+    <rect id="Rectangle_19789" data-name="Rectangle 19789" width="11.235" height="4.993" transform="translate(34.006 72.072)" fill="#e4c364"/>
+    <path id="Path_42281" data-name="Path 42281" d="M35.01,41.654A27.57,27.57,0,0,1,7.563,16.57c-.067.832-.133,1.648-.133,2.5a27.58,27.58,0,1,0,55.16,0,24.823,24.823,0,0,0-.133-2.5A27.583,27.583,0,0,1,35.01,41.654Z" transform="translate(4.605 10.678)" fill="#82bce4"/>
+    <path id="Path_42282" data-name="Path 42282" d="M34.184,53.314H19.62V38.75H34.184ZM22.966,49.985h7.906V42.079H22.966Z" transform="translate(12.705 25.416)"/>
+    <rect id="Rectangle_19790" data-name="Rectangle 19790" width="3.329" height="8.805" transform="translate(37.951 57.025)"/>
+    <rect id="Rectangle_19791" data-name="Rectangle 19791" width="35.17" height="3.329" transform="translate(0.5 69.792)"/>
+    <rect id="Rectangle_19792" data-name="Rectangle 19792" width="35.17" height="3.329" transform="translate(43.56 69.792)"/>
+    <path id="Path_42283" data-name="Path 42283" d="M35.675,58.989A29.245,29.245,0,1,1,64.919,29.745,29.274,29.274,0,0,1,35.675,58.989Zm0-55.16A25.916,25.916,0,1,0,61.59,29.745,25.946,25.946,0,0,0,35.675,3.829Z" transform="translate(3.94)"/>
+    <path id="Path_42284" data-name="Path 42284" d="M30.459,58.989c-9.071,0-16.179-12.85-16.179-29.245S21.387.5,30.459.5,46.637,13.35,46.637,29.745,39.53,58.989,30.459,58.989Zm0-55.16c-6.974,0-12.85,11.868-12.85,25.916S23.485,55.66,30.459,55.66s12.85-11.868,12.85-25.916S37.433,3.829,30.459,3.829Z" transform="translate(9.156)"/>
+    <rect id="Rectangle_19793" data-name="Rectangle 19793" width="3.329" height="55.094" transform="translate(37.951 2.198)"/>
+    <rect id="Rectangle_19794" data-name="Rectangle 19794" width="47.654" height="3.329" transform="translate(15.796 42.811)"/>
+    <rect id="Rectangle_19795" data-name="Rectangle 19795" width="55.094" height="3.329" transform="translate(12.068 28.08)"/>
+    <rect id="Rectangle_19796" data-name="Rectangle 19796" width="47.654" height="3.329" transform="translate(15.796 13.35)"/>
+  </g>
+</svg>
