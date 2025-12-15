@@ -1,6 +1,6 @@
 @extends('libraryPortal.layouts.master')
 @section('content')
-    {{-- @include('admin.layouts.flash-messages') --}}
+    @include('libraryPortal.layouts.flash-messages')
     <div class="row px-lg-1">
         <div class="col-lg-6 px-lg-2 mb-3">
             <div class="cardBox adminBx h-100">
