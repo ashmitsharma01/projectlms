@@ -59,7 +59,7 @@
 
                         </div>
                         <a href="{{ route('seat.add') }}" class="btn btn-primary-gradient rounded-1 addBtn">Assign
-                            Student</a>
+                            Seat</a>
                     </div>
                 </div>
                 <div class="px-3 py-2">

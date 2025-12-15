@@ -41,7 +41,7 @@
     <!-- Card for Add Teacher Form -->
     <div class="cardBox teacherMain py-md-4 mb-3">
         <div class="formPanel">
-            <h5 class="mb-3">{{ $heading }} Student</h5>
+            <h5 class="mb-3">{{ $heading }} Seat</h5>
             <hr class="form-divider">
 
             <!-- Form Start -->
