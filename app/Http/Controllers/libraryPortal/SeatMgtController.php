@@ -36,7 +36,7 @@ class SeatMgtController extends Controller
         }
 
         $this->data['seats'] = $query->get();
-
+        $this->data['totalSeats'] = Library::where('user_id',Auth::id())->value('total_seats');
         return view('libraryPortal.seats.index', $this->data);
     }
 

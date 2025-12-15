@@ -8,7 +8,7 @@
             $heading = 'View/Edit Student Details';
         }
     @endphp
-        @include('libraryPortal.layouts.flash-messages')
+    @include('libraryPortal.layouts.flash-messages')
 
     {{-- <div class="cardBox teacherMain py-md-3 mb-3">
         <div class="row">
@@ -37,11 +37,38 @@
 
         </div>
     </div> --}}
+    <style>
+        .seat-card {
+            border-radius: 8px;
+            padding: 10px;
+            min-height: 150px;
+            cursor: pointer;
+        }
+
+        .seat-white {
+            background: #fff;
+        }
+
+        .seat-yellow {
+            background: #fff3cd;
+        }
+
+        .seat-green {
+            background: #d1e7dd;
+        }
+
+        .seat-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
 
 
-    <div class="row" >
+    <div class="row">
         <div class="col-md-12 mb-3">
-            <div class="teacherTable">  
+            <div class="teacherTable">
                 <div class="headerTbl">
                     <h6 class="m-0">Seats Management</h6>
 
@@ -63,60 +90,62 @@
                     </div>
                 </div>
                 <div class="px-3 py-2">
-                    <div class="table-responsive tbleDiv">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th>Admission No.</th>
-                                    <th>Seat No.</th>
-                                    <th>Name</th>
-                                    <th>Mobile No.</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            {{-- <tbody id="studentTableBody">
-                                @foreach ($students as $student)
-                                    <tr id="studentRow_{{ $student->id }}">
-                                        <td>{{ $student->admission_no ?? null }}</td>
-                                        <td>
-                                            <span class="nameTbl student-name"> <img
-                                                    src="{{ $student->image ? Storage::url('uploads/user/profile_image/' . $student->image) : asset('frontend/images/default-image.jpg') }}"
-                                                    alt="">{{ $student->name }}
-                                            </span>
-                                        </td>
-                                        <td>{{ \Carbon\Carbon::parse($student->joining_date ?? null)->format('d/m/Y') }}
-                                        </td>
-                                        <td>{{ $student->user->mobile_no }}</td>
-                                        <td>
-                                            <span class="{{ $student->status == 1 ? 'activeTxt' : 'deactiveTxt' }}">
-                                                {{ $student->status == 1 ? 'Active' : 'Inactive' }}
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <!-- Edit -->
-                                                <a href="{{ route('student.edit', $student->id) }}"
-                                                    class="btn p-0 bg-transparent border-0 text-primary editBtn"
-                                                    title="Edit Student">
-                                                    <i class="bi bi-pencil-square fs-5"></i>
-                                                </a>
+                    <div class="row g-3">
+                        @foreach ($totalSeats as $seat)
+                            <div class="col-md-2">
+                                <div class="seat-card {{ $seat->status_class }}" data-seat-id="{{ $seat->id }}"
+                                    data-seat-no="{{ $seat->seat_no }}">
 
-                                                <!-- Delete -->
-                                                <button type="button"
-                                                    class="btn p-0 bg-transparent border-0 text-danger deleteStudentBtn"
-                                                    data-id="{{ $student->user_id }}" data-name="{{ $student->name }}"
-                                                    data-bs-toggle="modal" data-bs-target="#statusMdl">
+                                    <h6 class="text-center">Seat {{ $seat->seat_no }}</h6>
 
-                                                    <i class="bi bi-trash fs-5"></i>
-                                                </button>
+                                    {{-- Full Day --}}
+                                    @if ($seat->fullDay)
+                                        <div class="seat-row text-success fw-bold">
+                                            Full Day: {{ $seat->fullDay->user->name }}
+                                        </div>
+                                    @else
+                                        <div class="seat-row">
+                                            Full Day
+                                            <button class="btn btn-sm btn-outline-primary addSeat"
+                                                data-shift="full_day">+</button>
+                                        </div>
+                                    @endif
+
+                                    {{-- First Half --}}
+                                    @if (!$seat->fullDay)
+                                        @if ($seat->firstHalf)
+                                            <div class="seat-row text-warning">
+                                                1st Half: {{ $seat->firstHalf->user->name }}
                                             </div>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody> --}}
-                        </table>
+                                        @else
+                                            <div class="seat-row">
+                                                1st Half
+                                                <button class="btn btn-sm btn-outline-primary addSeat"
+                                                    data-shift="first_half">+</button>
+                                            </div>
+                                        @endif
+                                    @endif
+
+                                    {{-- Second Half --}}
+                                    @if (!$seat->fullDay)
+                                        @if ($seat->secondHalf)
+                                            <div class="seat-row text-warning">
+                                                2nd Half: {{ $seat->secondHalf->user->name }}
+                                            </div>
+                                        @else
+                                            <div class="seat-row">
+                                                2nd Half
+                                                <button class="btn btn-sm btn-outline-primary addSeat"
+                                                    data-shift="second_half">+</button>
+                                            </div>
+                                        @endif
+                                    @endif
+
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
+
                 </div>
             </div>
         </div>
@@ -145,89 +174,72 @@
     </div>
 
 
-    <div class="modal fade" id="studentInactive">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0 align-items-baseline">
-                    <div>
-                        <h6 class="modal-title fw-semibold">Inactive Student</h6>
-                        <p>Enter inactive date for changing the status of student from active to Inactive.</p>
+
+    <div class="modal fade" id="seatAssignModal">
+        <div class="modal-dialog">
+            <form method="POST" action="{{ route('seat.assign') }}">
+                @csrf
+                <input type="hidden" name="seat_id" id="seat_id">
+                <input type="hidden" name="shift" id="shift">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Assign Seat</h5>
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pt-0">
-                    <div class="">
-                        <div class="formPanel">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group bginput mb-3">
-                                        <label>Enter Date</label>
-                                        <input type="text" class="form-control dateBirth" value="Select date">
-                                    </div>
-                                </div>
+
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label>Shift</label>
+                            <select class="form-control" id="shiftSelect" disabled>
+                                <option value="full_day">Full Day</option>
+                                <option value="first_half">First Half</option>
+                                <option value="second_half">Second Half</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2">
+                            <label>User</label>
+                            <select name="user_id" class="form-control" required>
+                                @foreach ($users as $user)
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label>Start Date</label>
+                                <input type="date" name="start_date" class="form-control" required>
                             </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary-gradient rounded-1">Submit</button>
-                                <div>
-                                    <button type="button" class="btn btnNo">Back</button>
-                                </div>
+                            <div class="col">
+                                <label>End Date</label>
+                                <input type="date" name="end_date" class="form-control" required>
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Assign</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
     <script>
-        document.addEventListener("click", function(e) {
-            if (e.target.closest(".deleteStudentBtn")) {
-                let name = e.target.closest(".deleteStudentBtn").dataset.name;
-                document.getElementById("statusText").textContent = "Delete " + name + "?";
+        document.querySelectorAll('.addSeat').forEach(btn => {
+            btn.addEventListener('click', function() {
 
-                // Open modal in Bootstrap 5
-                var myModal = new bootstrap.Modal(document.getElementById("statusMdl"));
-                myModal.show();
-            }
-        });
-    </script>
+                let card = this.closest('.seat-card');
 
-    <script>
-        document.addEventListener('click', function(e) {
-            if (e.target.closest('.deleteStudentBtn')) {
+                document.getElementById('seat_id').value = card.dataset.seatId;
+                document.getElementById('shift').value = this.dataset.shift;
 
-                let btn = e.target.closest('.deleteStudentBtn');
-                let id = btn.getAttribute('data-id');
-                let name = btn.getAttribute('data-name');
+                document.getElementById('shiftSelect').value = this.dataset.shift;
 
-                document.getElementById('statusText').innerText =
-                    'Do you really want to delete "' + name + '"?';
-
-                document.getElementById('confirmDeleteBtn').href =
-                    "{{ route('student.delete', ':id') }}".replace(':id', id);
-            }
-        });
-    </script>
-
-    <script>
-        document.addEventListener("keyup", function() {
-            let nameFilter = document.getElementById("filterName").value.toLowerCase();
-            let mobileFilter = document.getElementById("filterMobile").value.toLowerCase();
-            let admissionFilter = document.getElementById("filterAdmission").value.toLowerCase();
-
-            let rows = document.querySelectorAll("#studentTableBody tr");
-
-            rows.forEach(row => {
-                let name = row.querySelector(".student-name").innerText.toLowerCase();
-                let mobile = row.children[3].innerText.toLowerCase();
-                let admission = row.children[0].innerText.toLowerCase();
-
-                let match =
-                    name.includes(nameFilter) &&
-                    mobile.includes(mobileFilter) &&
-                    admission.includes(admissionFilter);
-
-                row.style.display = match ? "" : "none";
+                new bootstrap.Modal(
+                    document.getElementById('seatAssignModal')
+                ).show();
             });
         });
     </script>
