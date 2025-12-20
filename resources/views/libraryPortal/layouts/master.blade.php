@@ -28,6 +28,8 @@
 
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script type="text/javascript" src="{{ asset('frontend/js/init.js') }}"></script>
     <script>
         var base_url = "{{ url('/') . '/' }}";
@@ -113,8 +115,8 @@
                                 <li class="nav-item">
                                     <button class="nav-link active" data-bs-toggle="pill"
                                         data-bs-target="#schoolDetails" type="button"><img
-                                            src="{{ asset('frontend/images/school-details-icon.svg') }}"
-                                            alt="" width="14" class="me-3">School Details</button>
+                                            src="{{ asset('frontend/images/school-details-icon.svg') }}" alt=""
+                                            width="14" class="me-3">School Details</button>
                                 </li>
                                 <li class="nav-item">
                                     <button class="nav-link" data-bs-toggle="pill" data-bs-target="#addressDetails"
@@ -403,6 +405,19 @@
             </div>
         </div>
     </div>
+
+    {{-- added for the library management tool --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('input[type="date"]').forEach(function(input) {
+                input.addEventListener('click', function() {
+                    if (this.showPicker) {
+                        this.showPicker();
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="{{ asset('frontend/js/script.js') }}"></script>
     <script src="{{ asset('admin/vendor/sweetalert2-7.0.0/sweetalert2.min.js') }}"></script>

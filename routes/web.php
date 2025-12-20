@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\libraryPortal\DashboardController;
 use App\Http\Controllers\LibraryUserController;
 use App\Http\Controllers\libraryPortal\UserMgtController;
+use App\Http\Controllers\libraryPortal\FeesMgtController;
 use App\Http\Controllers\libraryPortal\SeatMgtController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,9 +41,20 @@ Route::middleware(['auth'])->group(function () {
     });
     Route::controller(SeatMgtController::class)->group(function () {
         Route::get('seat/list', 'index')->name('seat.index');
-        Route::get('seat/add', 'seatAdd')->name('seat.add');
+        Route::post('seat/assign', 'seatAssign')->name('seat.assign');
         Route::get('seat/edit/{id}', 'seatEdit')->name('seat.edit');
-        Route::get('seat/delete/{id}', 'seatDelete')->name('seat.delete');
+        Route::get('seat-assignment/delete/{id}', 'deleteSeatAssignment')->name('seat.assignment.delete');
         Route::post('seat/save', 'seatSave')->name('seat.save');
+    });
+    Route::controller(FeesMgtController::class)->group(function () {
+        Route::get('fees/dashboard', 'dashboard')->name('fees.dashboard');
+        Route::get('collect/fees', 'collectFees')->name('collect.fees');
+        Route::get('collect-fees/edit/{id}', 'editCollectFees')->name('collect.fees.edit');
+
+        Route::post('collect/fees', 'collectFeesSave')->name('collect.fees.save');
+        Route::get('user/payment/history', 'userPaymentHistory')->name('user.payment.history');
+        // Route::get('seat/edit/{id}', 'seatEdit')->name('seat.edit');
+        // Route::get('seat-assignment/delete/{id}', 'deleteSeatAssignment')->name('seat.assignment.delete');
+        // Route::post('seat/save', 'seatSave')->name('seat.save');
     });
 });

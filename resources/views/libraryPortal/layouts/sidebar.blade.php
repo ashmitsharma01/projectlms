@@ -2,11 +2,19 @@
     $dashboardRoutes = ['dashboard'];
     $isActiveDashboardMenu = isActiveMenu($dashboardRoutes);
 
-    $studentManagerRoutes = ['student.manager','student.edit','student.add'];
+    $studentManagerRoutes = ['student.manager', 'student.edit', 'student.add'];
     $isActiveStudentManagerMenu = isActiveMenu($studentManagerRoutes);
-    
-    $seatMgtRoutes = ['seat.index','seat.add','seat.edit','seat.delete'];
+
+    $seatMgtRoutes = ['seat.index', 'seat.add', 'seat.edit', 'seat.delete'];
     $isActiveSeatMgtMenu = isActiveMenu($seatMgtRoutes);
+
+    $feesMgtRoutes = ['fees.dashboard'];
+    $isActiveFeesMgtMenu = isActiveRoute($feesMgtRoutes);
+
+    $collectFeesRoutes = ['collect.fees','collect.fees.edit'];
+    $isActiveCollectFeesRoutesMenu = isActiveRoute($collectFeesRoutes);
+    $userPaymentHistoryRoutes = ['user.payment.history'];
+    $isActiveUserPaymentHistoryRoutesMenu = isActiveRoute($userPaymentHistoryRoutes);
 @endphp
 
 
@@ -30,14 +38,69 @@
                     </a>
                 </li>
 
-                 <li>
+                <li>
                     <a href="{{ route('seat.index') }}" class="{{ $isActiveSeatMgtMenu ? 'active' : '' }}">
-                        <img src="{{ asset('frontend/images/planners-manager-icon.svg') }}" width="18" class="me-2">
+                        <img src="{{ asset('frontend/images/planners-manager-icon.svg') }}" width="18"
+                            class="me-2">
                         Seat Management
                     </a>
                 </li>
 
-               {{-- <li>
+                @php
+                    $isAnyFeesMgtActive = $isActiveFeesMgtMenu || $isActiveCollectFeesRoutesMenu || $isActiveUserPaymentHistoryRoutesMenu;
+                @endphp
+
+                <li>
+                    <a href="#tpg" class="submenuToggle" data-bs-toggle="collapse"
+                        aria-expanded="{{ $isAnyFeesMgtActive ? 'true' : 'false' }}">
+                        <img src="{{ asset('frontend/images/online-classes-icon.svg') }}" width="16"
+                            class="me-2">
+                        Fees Management
+                    </a>
+
+                    <div class="collapse {{ $isAnyFeesMgtActive ? 'show' : '' }}" id="tpg">
+                        <ul class="submenuList">
+                            <li>
+                                <a href="{{ route('fees.dashboard') }}"
+                                    class="{{ $isActiveFeesMgtMenu ? 'active' : '' }}">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('collect.fees') }}"
+                                    class="{{ $isActiveCollectFeesRoutesMenu ? 'active' : '' }}">
+                                    Collect Fees
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.payment.history') }}"
+                                    class="{{ $isActiveUserPaymentHistoryRoutesMenu ? 'active' : '' }}">
+                                    Student Payment History
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                {{-- <li>
+                    <a href="{{ route('fees.dashboard') }}" class="{{ $isActiveFeesMgtMenu ? 'active' : '' }}"
+                        class="submenuToggle" data-bs-toggle="collapse">
+                        <img src="{{ asset('frontend/images/online-classes-icon.svg') }}" width="16"
+                            class="me-2">
+                        Fees Management
+                    </a>
+                    <div class="collapse show">
+                        <ul class="submenuList">
+                            <li><a href="{{ route('fees.dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ route('collect.fees') }}">Collect Fees</a></li>
+                            <li><a href="#">Payment History</a></li>
+                            <li><a href="#">Online Test Review</a></li>
+                        </ul>
+                    </div>
+                </li> --}}
+
+                {{-- <li>
                     <a href="#">
                         <img src="{{ asset('frontend/images/planners-manager-icon.svg') }}" width="16"
                             class="me-2">

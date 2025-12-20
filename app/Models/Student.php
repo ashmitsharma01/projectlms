@@ -19,6 +19,8 @@ class Student extends Authenticatable
         'pincode',
         'address',
         'status',
+        'is_new',
+        'is_renew',
     ];
 
     public function user()

@@ -8,40 +8,75 @@
             $heading = 'View/Edit Student Details';
         }
     @endphp
-        @include('libraryPortal.layouts.flash-messages')
+    <style>
+        @keyframes bgBlink {
+            0% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
 
-    {{-- <div class="cardBox teacherMain py-md-3 mb-3">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="form-group mb-2">
-                    <input type="text" id="filterName" class="form-control" style="font-size: 12px !important"
-                        placeholder="Search by name">
-                </div>
-            </div>
+            50% {
+                background-color: rgba(25, 135, 84, 0.15);
+                border-color: currentColor;
+            }
 
-            <!-- Mobile Filter -->
-            <div class="col-md-2">
-                <div class="form-group mb-2">
-                    <input type="text" id="filterMobile" class="form-control" style="font-size: 12px !important"
-                        placeholder="Search by Mobile No.">
-                </div>
-            </div>
+            100% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
+        }
 
-            <!-- Admission Filter -->
-            <div class="col-md-2">
-                <div class="form-group mb-2">
-                    <input type="text" id="filterAdmission" class="form-control" style="font-size: 12px !important"
-                        placeholder="Search by Admission No.">
-                </div>
-            </div>
+        @keyframes bgBlinkDanger {
+            0% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
 
-        </div>
-    </div> --}}
+            50% {
+                background-color: rgba(220, 53, 69, 0.15);
+                border-color: currentColor;
+            }
+
+            100% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
+        }
+        @keyframes bgBlinkPrimary {
+            0% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
+
+            50% {
+                background-color: rgba(26, 185, 233, 0.349);
+                border-color: currentColor;
+            }
+
+            100% {
+                background-color: transparent;
+                border-color: currentColor;
+            }
+        }
+
+        .blink-success {
+            animation: bgBlink 1.8s ease-in-out infinite;
+        }
+
+        .blink-danger {
+            animation: bgBlinkDanger 1.8s ease-in-out infinite;
+        }
+        .blink-primary {
+            animation: bgBlinkPrimary 1.8s ease-in-out infinite;
+        }
+    </style>
 
 
-    <div class="row" >
+    @include('libraryPortal.layouts.flash-messages')
+
+    <div class="row">
         <div class="col-md-12 mb-3">
-            <div class="teacherTable">  
+            <div class="teacherTable">
                 <div class="headerTbl">
                     <h6 class="m-0">Student Management</h6>
 
@@ -77,6 +112,9 @@
                             </thead>
                             <tbody id="studentTableBody">
                                 @foreach ($students as $student)
+                                @php
+                                    $noSeatAssigned = App\Models\SeatAssignment::where('user_id',$student->user_id)->first();
+                                @endphp
                                     <tr id="studentRow_{{ $student->id }}">
                                         <td>{{ $student->admission_no ?? null }}</td>
                                         <td>
@@ -94,10 +132,11 @@
                                             </span>
                                         </td>
                                         <td>
-                                            <div class="d-flex gap-2">
+                                            <div class="d-flex align-items-center gap-2">
+
                                                 <!-- Edit -->
                                                 <a href="{{ route('student.edit', $student->id) }}"
-                                                    class="btn p-0 bg-transparent border-0 text-primary editBtn"
+                                                    class="btn p-0 bg-transparent border-0 text-primary"
                                                     title="Edit Student">
                                                     <i class="bi bi-pencil-square fs-5"></i>
                                                 </a>
@@ -107,10 +146,34 @@
                                                     class="btn p-0 bg-transparent border-0 text-danger deleteStudentBtn"
                                                     data-id="{{ $student->user_id }}" data-name="{{ $student->name }}"
                                                     data-bs-toggle="modal" data-bs-target="#statusMdl">
-
                                                     <i class="bi bi-trash fs-5"></i>
                                                 </button>
+
+                                                @if ($student->is_new == 1 && !$noSeatAssigned)
+                                                    <button type="button"
+                                                        class="btn btn-outline-success btn-sm px-3 blink-success collectFeesBtn"
+                                                        data-bs-toggle="modal" data-bs-target="#collectFeesModal"
+                                                        data-student-id="{{ $student->user_id }}">
+                                                        Collect Fees
+                                                    </button>
+                                                @elseif ($student->is_renew == 1)
+                                                    <button type="button"
+                                                        class="btn btn-outline-danger btn-sm px-3 blink-danger"
+                                                        data-id="{{ $student->user_id }}"
+                                                        data-name="{{ $student->name }}">
+                                                        Renew Fees
+                                                    </button>
+                                                @endif
+
+                                                @if($student->is_new == 0 && $student->is_renew == 0 && !$noSeatAssigned)
+                                                     <a type="button" href="{{ route('seat.index') }}"
+                                                        class="btn btn-outline-primary btn-sm px-3 blink-primary collectFeesBtn">
+                                                        Assign Seat
+                                                    </a>
+                                                @endif
+
                                             </div>
+
                                         </td>
                                     </tr>
                                 @endforeach
@@ -145,7 +208,7 @@
     </div>
 
 
-    <div class="modal fade" id="studentInactive">
+    {{-- <div class="modal fade" id="studentInactive">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0 align-items-baseline">
@@ -177,7 +240,93 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+
+    <div class="modal fade" id="collectFeesModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h6 class="modal-title fw-semibold">Collect Fees</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form action="{{ route('collect.fees.save') }}" method="POST" class="row g-3">
+                    @csrf
+
+                    <div class="modal-body">
+
+                        <input type="hidden" name="id" id="student_id_field">
+                        <input type="hidden" name="isFromStudentManagment" value="1" id="student_id_field">
+
+                        <div class="row formPanel">
+
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label>Student <b>*</b></label>
+                                    <select name="student_id" id="student_select" class="form-select">
+                                        <option value="">Select student</option>
+                                        @foreach ($students as $student)
+                                            <option value="{{ $student->user_id }}">{{ $student->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Start Date -->
+                            <div class="col-md-3">
+                                <div class="form-group mb-3">
+                                    <label>Start Date <b>*</b></label>
+                                    <input type="date" name="start_date" id="start_date" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- End Date -->
+                            <div class="col-md-3">
+                                <div class="form-group mb-3">
+                                    <label>End Date <b>*</b></label>
+                                    <input type="date" name="end_date" id="end_date" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Amount -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label>Amount <b>*</b></label>
+                                    <input type="number" name="amount" class="form-control"
+                                        placeholder="Enter amount">
+                                </div>
+                            </div>
+
+                            <!-- Payment Mode -->
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label>Payment Mode <b>*</b></label>
+                                    <select name="payment_mode" class="form-select">
+                                        <option value="">Select</option>
+                                        <option value="cash">Cash</option>
+                                        <option value="upi">UPI</option>
+                                        <option value="card">Card</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btnNo" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-gradient rounded-1">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
     </div>
+
 
     <script>
         document.addEventListener("click", function(e) {
@@ -229,6 +378,20 @@
 
                 row.style.display = match ? "" : "none";
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            let btn = e.target.closest('.collectFeesBtn');
+            if (!btn) return;
+            let studentId = btn.dataset.studentId;
+            document.getElementById('student_id_field').value = studentId;
+            document.getElementById('student_select').value = studentId;
+            document.getElementById('start_date').value =
+                "{{ \Carbon\Carbon::now()->toDateString() }}";
+            document.getElementById('end_date').value =
+                "{{ \Carbon\Carbon::now()->addMonth()->toDateString() }}";
         });
     </script>
 @endsection

@@ -35,8 +35,17 @@ class User extends Authenticatable
         ];
     }
 
-    public function userRole()
+    public function role()
     {
-        return $this->belongsTo(UserRole::class, 'user_id');
+        return $this->hasOne(UserRole::class, 'user_id');
+    }
+    public function student()
+    {
+        return $this->hasOne(Student::class, 'user_id');
+    }
+    // App\Models\User.php
+    public function seatAssignment()
+    {
+        return $this->hasOne(SeatAssignment::class, 'user_id');
     }
 }
