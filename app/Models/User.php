@@ -20,6 +20,7 @@ class User extends Authenticatable
         'vallidate_string',
         'status',
         'api_token',
+        'image'
     ];
 
     protected $hidden = [
@@ -47,5 +48,9 @@ class User extends Authenticatable
     public function seatAssignment()
     {
         return $this->hasOne(SeatAssignment::class, 'user_id');
+    }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class, 'student_user_id', 'id');
     }
 }

@@ -5,15 +5,13 @@ namespace App\Http\Controllers\libraryPortal;
 use App\Http\Controllers\Controller;
 use App\Models\Library;
 use App\Models\Payment;
+use App\Models\SeatAssignment;
 use App\Models\Student;
 use App\Models\User;
-use App\Models\UserRole;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
 class FeesMgtController extends Controller
@@ -22,8 +20,111 @@ class FeesMgtController extends Controller
 
     public function dashboard(Request $request)
     {
+        $libraryId = Library::where('user_id', Auth::id())->value('id');
+
+        $this->data['totalFeesCollected'] = Payment::where('library_id', $libraryId)
+            ->whereMonth('payment_date', Carbon::now()->month)
+            ->whereYear('payment_date', Carbon::now()->year)
+            ->sum('amount');
+
+        // -----------------------------
+        // 2. Expected Fees This Month
+        // -----------------------------
+        $expectedUserIds = SeatAssignment::where('library_id', Auth::id())
+            ->whereBetween('end_date', [
+                Carbon::now()->startOfMonth(),
+                Carbon::now()->endOfMonth()
+            ])
+            ->pluck('user_id')
+            ->unique();
+
+        $expectedPayments = Payment::where('library_id', $libraryId)
+            ->whereIn('student_user_id', $expectedUserIds)
+            ->select('student_user_id', 'amount')
+            ->whereIn('id', function ($query) {
+                $query->selectRaw('MAX(id)')
+                    ->from('payments')
+                    ->groupBy('student_user_id');
+            })
+            ->get();
+
+        $this->data['expectedFeesThisMonth'] = $expectedPayments->sum('amount');
+        $this->data['expectedFeesUserCount'] = $expectedPayments->count();
+
+        // -----------------------------
+        // 3. Upcoming Renewals (Next 7 Days)
+        // -----------------------------
+        $upcomingUserIds = SeatAssignment::where('library_id', Auth::id())
+            ->whereBetween('end_date', [
+                Carbon::today(),
+                Carbon::today()->addDays(7)
+            ])
+            ->pluck('user_id')
+            ->unique();
+
+        $upcomingPayments = Payment::where('library_id', $libraryId)
+            ->whereIn('student_user_id', $upcomingUserIds)
+            ->select('student_user_id', 'amount')
+            ->whereIn('id', function ($query) {
+                $query->selectRaw('MAX(id)')
+                    ->from('payments')
+                    ->groupBy('student_user_id');
+            })
+            ->get();
+
+        $this->data['upcomingRenewalsAmount'] = $upcomingPayments->sum('amount');
+        $this->data['upcomingRenewalsCount'] = $upcomingPayments->count();
+
+        // today's income
+        $this->data['todaysIncome'] = Payment::where('library_id', $libraryId)
+            ->whereDate('payment_date', Carbon::today())
+            ->sum('amount');
+
+        $this->data['todaysIncomeCount'] = Payment::where('library_id', $libraryId)
+            ->whereDate('payment_date', Carbon::today())
+            ->count();
+
+        $this->data['recentPayments'] = Payment::with('user')->where('library_id', $libraryId)
+            ->orderBy('payment_date', 'desc')
+            ->limit(5)
+            ->get();
+
+
+        $monthlyPaymentsRaw = Payment::where('library_id', $libraryId)
+            ->whereYear('payment_date', Carbon::now()->year)
+            ->whereNotNull('payment_date')
+            ->get()
+            ->groupBy(function ($payment) {
+                return Carbon::parse($payment->payment_date)->month;
+            })
+            ->map(function ($rows) {
+                return $rows->sum('amount');
+            });
+
+        $monthlyPayments = [];
+        for ($i = 1; $i <= 12; $i++) {
+            $monthlyPayments[] = $monthlyPaymentsRaw[$i] ?? 0;
+        }
+
+        $this->data['monthlyPayments'] = $monthlyPayments;
+
+        $this->data['expiringStudents'] = SeatAssignment::with([
+            'user',
+            'user.student',
+            'user.payments' => function ($q) {
+                $q->latest('payment_date')->limit(1);
+            }
+        ])
+            ->where('library_id', Auth::id())
+            ->whereBetween('end_date', [
+                Carbon::today(),
+                Carbon::today()->addDays(7)
+            ])
+            ->get();
+
         return view('libraryPortal.feesMgt.dashboard', $this->data);
     }
+
     public function collectFees(Request $request)
     {
         $libraryID = Library::where('user_id', Auth::id())->value('id');
@@ -56,8 +157,8 @@ class FeesMgtController extends Controller
 
 
         $this->data['payment'] = Payment::with('user')->where('id', $paymentId)
-        ->where('library_id', $libraryID)
-        ->firstOrFail();
+            ->where('library_id', $libraryID)
+            ->firstOrFail();
 
         return view('libraryPortal.feesMgt.edit-collect-fees', $this->data);
     }

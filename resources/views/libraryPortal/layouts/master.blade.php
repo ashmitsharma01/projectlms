@@ -27,6 +27,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/newStyle.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>

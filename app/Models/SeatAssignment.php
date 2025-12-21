@@ -11,7 +11,7 @@ class SeatAssignment extends Model
 
     protected $fillable = [
         'seat_id',
-        'library_id',
+        'library_id', // this is the libray user id
         'user_id',
         'shift_id',
         'start_date',

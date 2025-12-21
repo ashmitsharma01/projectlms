@@ -8,7 +8,24 @@
             margin-left: 9px;
             border-radius: 8px;
             margin-bottom: 8px;
+        }
 
+        .blink {
+            animation: blinkBg 1s infinite;
+        }
+
+        @keyframes blinkBg {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
     </style>
     <div class="row px-lg-1">
@@ -24,7 +41,7 @@
                                 <img src="{{ asset('frontend/images/total-student-icon.svg') }}" alt=""
                                     width="70">
                             </figure>
-                            <span>Total Fees <b>450</b></span>
+                            <span>Fees Collected<b>₹{{ $totalFeesCollected }}</b></span>
                         </div>
                         <p>
                             <img src="{{ asset('frontend/images/higher-icon.svg') }}" alt="" width="14"
@@ -40,13 +57,15 @@
                             <figure>
                                 <img src="{{ asset('frontend/images/total-teachers-icon.svg') }}" alt="">
                             </figure>
-                            <span>Pending Students <b>32</b></span>
+                            <span>Expected Fees(This Month)<b>₹{{ $expectedFeesThisMonth }}</b></span>
                         </div>
-                        <p>
-                            <img src="{{ asset('frontend/images/less-icon.svg') }}" alt="" width="14"
-                                class="me-2">
-                            4% Less than Last Month
-                        </p>
+                        @if ($expectedFeesUserCount != 0)
+                            <p>
+                                <img src="{{ asset('frontend/images/higher-icon.svg') }}" alt="" width="14"
+                                    class="me-2">
+                                Total {{ $expectedFeesUserCount }} Students
+                            </p>
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-3 px-md-2 mb-3">
@@ -55,13 +74,15 @@
                             <figure>
                                 <img src="{{ asset('frontend/images/total-teachers-icon.svg') }}" alt="">
                             </figure>
-                            <span>Expired Students <b>32</b></span>
+                            <span>Today's Income<b>{{ $todaysIncome }}</b></span>
                         </div>
-                        <p>
-                            <img src="{{ asset('frontend/images/less-icon.svg') }}" alt="" width="14"
-                                class="me-2">
-                            4% Less than Last Month
-                        </p>
+                        @if ($todaysIncomeCount != 0)
+                            <p>
+                                <img src="{{ asset('frontend/images/higher-icon.svg') }}" alt="" width="14"
+                                    class="me-2">
+                                Total {{ $todaysIncomeCount }} Students
+                            </p>
+                        @endif
                     </div>
                 </div>
 
@@ -71,8 +92,15 @@
                             <figure>
                                 <img src="{{ asset('frontend/images/digital-content.svg') }}" alt="">
                             </figure>
-                            <span>Expiring in 7 days <b>125</b></span>
+                            <span>Upcoming Renewals (7 Days)<b>{{ $upcomingRenewalsAmount }}</b></span>
                         </div>
+                        @if ($upcomingRenewalsCount != 0)
+                            <p>
+                                <img src="{{ asset('frontend/images/higher-icon.svg') }}" alt="" width="14"
+                                    class="me-2">
+                                Total {{ $upcomingRenewalsCount }} Students
+                            </p>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -85,109 +113,60 @@
                 <div class="headingBx">
                     <h4>Recent Payments</h4>
 
-                    <div class="d-flex gap-2">
+                    {{-- <div class="d-flex gap-2">
                         <select id="classFilter" class="form-select">
                             <option value="all" selected>Select Class</option>
                             <option value="1">Class 1</option>
                             <option value="2">Class 2</option>
                             <option value="3">Class 3</option>
                         </select>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <ul id="plannedClassesList" class="classesUl">
-                    <li data-class-id="1">
-                        <div class="plannedList">
-                            <div class="d-flex planUser gap-2">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/gallery1.jpg') }}" alt="">
-                                </figure>
-                                <div>
-                                    <h4>Science Live Class</h4>
-                                    <span>
-                                        <img src="{{ asset('frontend/images/list-profile.jpg') }}" alt="">
-                                        Jane Smith
-                                    </span>
-                                </div>
-                            </div>
-                            <strong>Duration <b>45 Min.</b></strong>
-                            <strong>Scheduled Time <b>2025-01-12 10:00 AM</b></strong>
-                        </div>
-                    </li>
+                    @forelse($recentPayments as $payment)
+                        @php
+                            $name = $payment->user->name ?? 'User';
+                            $initial = strtoupper(substr($name, 0, 1));
 
-                    <!-- STATIC ITEM 2 -->
-                    <li data-class-id="2">
-                        <div class="plannedList">
-                            <div class="d-flex planUser gap-2">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/gallery1.jpg') }}" alt="">
-                                </figure>
-                                <div>
-                                    <h4>Mathematics Revision</h4>
-                                    <span>
-                                        <img src="{{ asset('frontend/images/list-profile.jpg') }}" alt="">
-                                        Rahul Verma
-                                    </span>
+                            $colors = ['#4f46e5', '#16a34a', '#ea580c', '#7c3aed', '#dc2626'];
+                            $bgColor = $colors[$payment->user->id % count($colors)];
+                        @endphp
+
+                        <li>
+                            <div class="plannedList">
+                                <div class="d-flex planUser gap-2 align-items-center">
+                                    <div
+                                        style="width:40px;height:40px;border-radius:50%;background-color:{{ $bgColor }};color:#fff;display:flex;
+                                                align-items:center;justify-content:center;font-weight:600;font-size:16px; ">
+                                        {{ $initial }}
+                                    </div>
+
+                                    <div>
+                                        <h4>{{ $name }}</h4>
+                                    </div>
                                 </div>
+
+                                <strong>
+                                    <b>{{ \Carbon\Carbon::parse($payment->payment_date)->format('d-m-Y h:i A') }}</b>
+                                </strong>
+
+                                <strong>
+                                    <b style="margin-left:45px; color:#30C768;">
+                                        ₹{{ number_format($payment->amount) }}
+                                    </b>
+                                </strong>
                             </div>
-                            <strong>Duration <b>60 Min.</b></strong>
-                            <strong>Scheduled Time <b>2025-01-14 03:00 PM</b></strong>
-                        </div>
-                    </li>
-                    <li data-class-id="2">
-                        <div class="plannedList">
-                            <div class="d-flex planUser gap-2">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/gallery1.jpg') }}" alt="">
-                                </figure>
-                                <div>
-                                    <h4>Mathematics Revision</h4>
-                                    <span>
-                                        <img src="{{ asset('frontend/images/list-profile.jpg') }}" alt="">
-                                        Rahul Verma
-                                    </span>
-                                </div>
+                        </li>
+                    @empty
+                        <li>
+                            <div class="plannedList">
+                                <p class="text-muted m-0">No recent payments found</p>
                             </div>
-                            <strong>Duration <b>60 Min.</b></strong>
-                            <strong>Scheduled Time <b>2025-01-14 03:00 PM</b></strong>
-                        </div>
-                    </li>
-                    <li data-class-id="2">
-                        <div class="plannedList">
-                            <div class="d-flex planUser gap-2">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/gallery1.jpg') }}" alt="">
-                                </figure>
-                                <div>
-                                    <h4>Mathematics Revision</h4>
-                                    <span>
-                                        <img src="{{ asset('frontend/images/list-profile.jpg') }}" alt="">
-                                        Rahul Verma
-                                    </span>
-                                </div>
-                            </div>
-                            <strong>Duration <b>60 Min.</b></strong>
-                            <strong>Scheduled Time <b>2025-01-14 03:00 PM</b></strong>
-                        </div>
-                    </li>
-                    <li data-class-id="2">
-                        <div class="plannedList">
-                            <div class="d-flex planUser gap-2">
-                                <figure>
-                                    <img src="{{ asset('frontend/images/gallery1.jpg') }}" alt="">
-                                </figure>
-                                <div>
-                                    <h4>Mathematics Revision</h4>
-                                    <span>
-                                        <img src="{{ asset('frontend/images/list-profile.jpg') }}" alt="">
-                                        Rahul Verma
-                                    </span>
-                                </div>
-                            </div>
-                            <strong>Duration <b>60 Min.</b></strong>
-                            <strong>Scheduled Time <b>2025-01-14 03:00 PM</b></strong>
-                        </div>
-                    </li>
+                        </li>
+                    @endforelse
+
+
                 </ul>
             </div>
         </div>
@@ -211,83 +190,46 @@
                             <tr>
                                 <th>Admission No.</th>
                                 <th>Name</th>
-                                <th>Admission Date</th>
-                                <th>Mobile No.</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th>Last Payment Date</th>
+                                <th>Next Payment Date</th>
+                                <th>Days Left</th>
                             </tr>
                         </thead>
                         <tbody id="studentTableBody">
+                            @forelse($expiringStudents as $seat)
+                                @php
+                                    $lastPayment = $seat->user->payments->first();
+                                    $daysLeft = \Carbon\Carbon::today()->diffInDays($seat->end_date, false);
+                                @endphp
 
-                            <tr>
-                                <td>LIB-001</td>
-                                <td>
-                                    <span class="nameTbl student-name">
-                                        <img src="{{ asset('frontend/images/default-image.jpg') }}" alt="">
-                                        Rahul Sharma
-                                    </span>
-                                </td>
-                                <td>01/01/2025</td>
-                                <td>9876543210</td>
-                                <td><span class="activeTxt">Active</span></td>
-                                <td>
-                                    <div class="d-flex gap-2">
-                                        <a href="#" class="btn p-0 bg-transparent border-0 text-primary">
-                                            <i class="bi bi-pencil-square fs-5"></i>
-                                        </a>
-                                        <button class="btn p-0 bg-transparent border-0 text-danger">
-                                            <i class="bi bi-trash fs-5"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>LIB-002</td>
-                                <td>
-                                    <span class="nameTbl student-name">
-                                        <img src="{{ asset('frontend/images/default-image.jpg') }}" alt="">
-                                        Aman Verma
-                                    </span>
-                                </td>
-                                <td>05/01/2025</td>
-                                <td>9123456780</td>
-                                <td><span class="activeTxt">Active</span></td>
-                                <td>
-                                    <div class="d-flex gap-2">
-                                        <a href="#" class="btn p-0 bg-transparent border-0 text-primary">
-                                            <i class="bi bi-pencil-square fs-5"></i>
-                                        </a>
-                                        <button class="btn p-0 bg-transparent border-0 text-danger">
-                                            <i class="bi bi-trash fs-5"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>LIB-003</td>
-                                <td>
-                                    <span class="nameTbl student-name">
-                                        <img src="{{ asset('frontend/images/default-image.jpg') }}" alt="">
-                                        Neha Gupta
-                                    </span>
-                                </td>
-                                <td>10/01/2025</td>
-                                <td>9988776655</td>
-                                <td><span class="deactiveTxt">Inactive</span></td>
-                                <td>
-                                    <div class="d-flex gap-2">
-                                        <a href="#" class="btn p-0 bg-transparent border-0 text-primary">
-                                            <i class="bi bi-pencil-square fs-5"></i>
-                                        </a>
-                                        <button class="btn p-0 bg-transparent border-0 text-danger">
-                                            <i class="bi bi-trash fs-5"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>{{ $seat->user->student->admission_no }}</td>
+                                    <td>
+                                        <span class="nameTbl student-name">
+                                            {{ $seat->user->name }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        {{ $lastPayment ? \Carbon\Carbon::parse($lastPayment->payment_date)->format('d-m-Y') : 'N/A' }}
+                                    </td>
+                                    <td>
+                                        {{ \Carbon\Carbon::parse($seat->end_date)->format('d-m-Y') ?? 'N/A' }}
+                                    </td>
+                                    <td>
+                                        <span class="deactiveTxt {{ $daysLeft == 0 ? 'blink' : '' }}">
+                                            {{ $daysLeft }} Day{{ $daysLeft > 1 ? 's' : '' }} Left
+                                        </span>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted">
+                                        No students expiring in next 7 days
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
+
                     </table>
                 </div>
             </div>
@@ -324,12 +266,12 @@
                 yAxis: {
                     min: 0,
                     title: {
-                        text: 'Number of Students'
+                        text: 'Monthly Earnings (₹)'
                     }
                 },
                 tooltip: {
                     shared: true,
-                    valueSuffix: ' students'
+                    valuePrefix: '₹'
                 },
                 plotOptions: {
                     column: {
@@ -339,8 +281,8 @@
                     }
                 },
                 series: [{
-                    name: 'Students',
-                    data: [120, 135, 150, 165, 180, 200, 210, 205, 195, 185, 170, 160]
+                    name: 'Fees Collected',
+                    data: @json($monthlyPayments)
                 }],
                 credits: {
                     enabled: false

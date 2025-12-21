@@ -42,6 +42,7 @@
                 border-color: currentColor;
             }
         }
+
         @keyframes bgBlinkPrimary {
             0% {
                 background-color: transparent;
@@ -66,6 +67,7 @@
         .blink-danger {
             animation: bgBlinkDanger 1.8s ease-in-out infinite;
         }
+
         .blink-primary {
             animation: bgBlinkPrimary 1.8s ease-in-out infinite;
         }
@@ -112,9 +114,12 @@
                             </thead>
                             <tbody id="studentTableBody">
                                 @foreach ($students as $student)
-                                @php
-                                    $noSeatAssigned = App\Models\SeatAssignment::where('user_id',$student->user_id)->first();
-                                @endphp
+                                    @php
+                                        $noSeatAssigned = App\Models\SeatAssignment::where(
+                                            'user_id',
+                                            $student->user_id,
+                                        )->first();
+                                    @endphp
                                     <tr id="studentRow_{{ $student->id }}">
                                         <td>{{ $student->admission_no ?? null }}</td>
                                         <td>
@@ -165,8 +170,8 @@
                                                     </button>
                                                 @endif
 
-                                                @if($student->is_new == 0 && $student->is_renew == 0 && !$noSeatAssigned)
-                                                     <a type="button" href="{{ route('seat.index') }}"
+                                                @if ($student->is_new == 0 && $student->is_renew == 0 && !$noSeatAssigned)
+                                                    <a type="button" href="{{ route('seat.index') }}"
                                                         class="btn btn-outline-primary btn-sm px-3 blink-primary collectFeesBtn">
                                                         Assign Seat
                                                     </a>

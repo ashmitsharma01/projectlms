@@ -46,7 +46,7 @@ a {
 .greenBorder {
     width: 80px;
     height: 3px;
-    background: #00BE55;
+    background: #00be55;
     border-radius: 4px;
     display: block;
     margin-bottom: 10px;
@@ -67,7 +67,7 @@ a {
 
 .btn-primary {
     font-size: 15px;
-    background: #00438C !important;
+    background: #00438c !important;
     border: none !important;
     padding: 11px 20px;
     min-width: 110px;
@@ -76,7 +76,8 @@ a {
 }
 
 .btn-primary-gradient {
-    background: transparent linear-gradient(271deg, #00438C 0%, #1265DA 100%) 0% 0% no-repeat padding-box !important;
+    background: transparent linear-gradient(271deg, #00438c 0%, #1265da 100%) 0%
+        0% no-repeat padding-box !important;
     font-size: 13px;
     border: none !important;
     padding: 10px 20px;
@@ -86,12 +87,13 @@ a {
 }
 
 .btn-primary-gradient:hover {
-    background: transparent linear-gradient(271deg, #00438C 0%, #1265DA 100%) 0% 0% no-repeat padding-box !important;
+    background: transparent linear-gradient(271deg, #00438c 0%, #1265da 100%) 0%
+        0% no-repeat padding-box !important;
 }
 
 .btn-success {
     font-size: 15px;
-    background: #00BE55 !important;
+    background: #00be55 !important;
     border: none !important;
     padding: 11px 20px;
     min-width: 110px;
@@ -101,7 +103,7 @@ a {
 
 .btn-secondary {
     font-size: 15px;
-    background: #BCBCBC !important;
+    background: #bcbcbc !important;
     border: none !important;
     padding: 11px 20px;
     min-width: 110px;
@@ -129,9 +131,8 @@ select {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(112, 112, 112, .22);
+    background: rgba(112, 112, 112, 0.22);
     border-radius: 30px;
-
 }
 
 .mainHeader {
@@ -140,7 +141,7 @@ select {
     left: 0;
     width: 100%;
     z-index: 999;
-    transition: .3s all;
+    transition: 0.3s all;
 }
 
 .mainHeader.fixed {
@@ -149,7 +150,7 @@ select {
 }
 
 .mainHeader .navbar-nav {
-    background-color: #00438C;
+    background-color: #00438c;
     background-image: url(../images/border-bg.svg);
     border-radius: 100px;
     background-position: center;
@@ -166,11 +167,11 @@ select {
 }
 
 .mainHeader .navbar-nav .nav-link.active {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .mainBanner {
-    background: #F6F6EE;
+    background: #f6f6ee;
     padding: 120px 0 200px;
     position: relative;
 }
@@ -179,7 +180,7 @@ select {
     position: absolute;
     top: 29%;
     right: 26%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -187,7 +188,7 @@ select {
     position: absolute;
     top: 30%;
     right: 0;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -195,7 +196,7 @@ select {
     position: absolute;
     bottom: 26%;
     left: 3%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -203,7 +204,7 @@ select {
     position: absolute;
     top: 52%;
     right: 18%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -211,7 +212,7 @@ select {
     position: absolute;
     bottom: 24%;
     right: 3%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -219,7 +220,7 @@ select {
     position: absolute;
     top: 43%;
     left: 26%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -227,7 +228,7 @@ select {
     position: absolute;
     top: 20%;
     right: 14%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -235,7 +236,7 @@ select {
     position: absolute;
     top: 34%;
     right: 10%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -243,7 +244,7 @@ select {
     position: absolute;
     top: 12%;
     right: 5%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -251,7 +252,7 @@ select {
     position: absolute;
     top: 44%;
     left: 9%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -259,7 +260,7 @@ select {
     position: absolute;
     top: 29%;
     left: 18%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -267,7 +268,7 @@ select {
     position: absolute;
     top: 38%;
     left: 0;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -275,7 +276,7 @@ select {
     position: absolute;
     top: 11%;
     left: 10%;
-    transition: .5s all;
+    transition: 0.5s all;
     pointer-events: none;
 }
 
@@ -307,7 +308,7 @@ select {
     width: 7px;
     height: 7px;
     border-radius: 100px;
-    background: #00BE55;
+    background: #00be55;
 }
 
 .bannerTxt {
@@ -333,7 +334,7 @@ select {
 }
 
 .bannerTxt h1 b {
-    color: #00BE55;
+    color: #00be55;
     font-weight: 700;
 }
 
@@ -396,7 +397,15 @@ select {
     border-radius: 100px;
     margin-right: 20px;
     padding: 3px;
-    background: transparent linear-gradient(270deg, #676CE621 0%, #D3A2EF21 17%, #F3DA3321 60%, #F5705921 100%) 0% 0% no-repeat padding-box;
+    background: transparent
+        linear-gradient(
+            270deg,
+            #676ce621 0%,
+            #d3a2ef21 17%,
+            #f3da3321 60%,
+            #f5705921 100%
+        )
+        0% 0% no-repeat padding-box;
 }
 
 .searchInput .btn {
@@ -407,8 +416,7 @@ select {
     font-weight: 500;
 }
 
-
-.togglediv input[type=checkbox] {
+.togglediv input[type="checkbox"] {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -427,22 +435,22 @@ select {
 }
 
 .togglediv label:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 3px;
     left: 4px;
     width: 30px;
     height: 30px;
-    background: #00BE55;
+    background: #00be55;
     border-radius: 90px;
     transition: 0.3s all;
 }
 
-.togglediv input:checked+label {
+.togglediv input:checked + label {
     background: #fff;
 }
 
-.togglediv input:checked+label:after {
+.togglediv input:checked + label:after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
@@ -452,7 +460,7 @@ select {
 }
 
 .learnSection {
-    background: #F6F6EE;
+    background: #f6f6ee;
 }
 
 .contentNeeds {
@@ -556,7 +564,7 @@ select {
 }
 
 .slider-content button {
-    background-color: rgba(4, 71, 131, .7);
+    background-color: rgba(4, 71, 131, 0.7);
     color: #fff;
     font-size: 20px;
     border-radius: 50%;
@@ -621,7 +629,7 @@ select {
 
 .skillsBox figure {
     text-align: center;
-    background-color: #FDF4ED;
+    background-color: #fdf4ed;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -641,28 +649,28 @@ select {
 }
 
 .skillsBox2 figure {
-    background-color: #EFEFF4;
+    background-color: #efeff4;
 }
 
 .skillsBox3 figure {
-    background-color: #E9F1EE;
+    background-color: #e9f1ee;
 }
 
 .skillsBox4 figure {
-    background-color: #DAF3F8;
+    background-color: #daf3f8;
 }
 
 .skillsBox figure {
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .skillsBox:hover figure {
-    background-color: #00BE5530;
+    background-color: #00be5530;
 }
 
 .skillsBox:hover h3,
 .skillsBox:hover p {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .featuresSection {
@@ -679,7 +687,7 @@ select {
 }
 
 .featureTxtbox {
-    background-color: #FFFFFF20;
+    background-color: #ffffff20;
     padding: 10px;
     width: 33.33% !important;
     border-radius: 4px;
@@ -757,7 +765,7 @@ select {
 }
 
 .coursesTabs .nav-item::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #000000;
     top: 14px;
@@ -781,7 +789,7 @@ select {
     background: #fff;
 }
 
-.nonacadBx>figure>a>img {
+.nonacadBx > figure > a > img {
     min-height: 140px;
     max-height: 140px;
     object-fit: cover;
@@ -794,7 +802,7 @@ select {
     min-width: 100px;
 }
 
-.coursesBox>figure>img {
+.coursesBox > figure > img {
     width: 100%;
     height: 160px;
     border-radius: 4px;
@@ -808,7 +816,7 @@ select {
 
 .coursesBox h3 {
     font-size: 14px;
-    color: #00438C;
+    color: #00438c;
     margin: 18px 0px;
     /* display: -webkit-box; */
     -webkit-line-clamp: 1;
@@ -825,13 +833,13 @@ select {
 }
 
 .pricetag {
-    color: #00BE55;
+    color: #00be55;
     font-weight: 600;
     font-size: 17px;
 }
 
 .pricetag span {
-    color: #8F8383;
+    color: #8f8383;
     text-decoration: line-through;
     font-size: 16px;
 }
@@ -859,9 +867,8 @@ select {
 }
 
 .exploreconTent span {
-
     font-size: 14px;
-    color: #00438C;
+    color: #00438c;
     font-weight: 600;
 }
 
@@ -883,7 +890,7 @@ select {
 
 .launchedSection {
     position: relative;
-    background: #F6F6EE;
+    background: #f6f6ee;
 }
 
 .exclusiveTag {
@@ -897,27 +904,26 @@ select {
 }
 
 .standardPlan {
-    background-color: #FFEDB6;
+    background-color: #ffedb6;
     padding: 20px;
     border-radius: 6px;
     position: relative;
 }
 
 .essentialsBg {
-    background-color: #D1E8FF;
+    background-color: #d1e8ff;
 }
 
 .premiumBg {
-    background-color: #B7FFD7;
+    background-color: #b7ffd7;
 }
 
 .standardPlan strong {
-    color: #00438C;
+    color: #00438c;
     font-size: 18px;
     font-weight: 700;
     display: block;
     padding-bottom: 10px;
-
 }
 
 .standardPlan strong b {
@@ -944,17 +950,17 @@ select {
     padding-bottom: 50px;
 }
 
-.planlistUl>li p {
+.planlistUl > li p {
     font-size: 14px;
     font-weight: 500;
 }
 
 .hrClr {
-    color: #C2C2C2;
+    color: #c2c2c2;
 }
 
 .recommended {
-    background-color: #00438C;
+    background-color: #00438c;
     padding: 6px 16px;
     color: #fff;
     font-weight: 400;
@@ -966,7 +972,7 @@ select {
 }
 
 .meetSection {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
 }
 
 .meetLottie {
@@ -978,7 +984,7 @@ select {
 .meetSliderContent {
     display: flex;
     flex-wrap: wrap;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 6px #00000029;
     padding: 15px;
     margin: 10px;
@@ -992,14 +998,14 @@ select {
 
 .meetslidertxt span {
     display: block;
-    color: #1060CF;
+    color: #1060cf;
     font-size: 20px;
     font-weight: 600;
 }
 
 .meetslidertxt b {
     display: block;
-    color: #1060CF;
+    color: #1060cf;
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -1026,7 +1032,7 @@ select {
 
     height: 315px;
     width: 100%;
-    border: 2px solid #D5D1D1;
+    border: 2px solid #d5d1d1;
     border-radius: 4px;
 }
 
@@ -1035,7 +1041,7 @@ select {
 }
 
 .meetContent {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 6px #00000029;
     padding: 10px 10px 20px;
     margin: 10px;
@@ -1049,7 +1055,7 @@ select {
 
     height: 315px;
     width: 100%;
-    border: 2px solid #D5D1D1;
+    border: 2px solid #d5d1d1;
     border-radius: 4px;
 }
 
@@ -1078,7 +1084,8 @@ select {
 }
 
 .hovertextMain {
-    background: transparent linear-gradient(271deg, #00438C 0%, #1265DA 100%) 0% 0% no-repeat padding-box !important;
+    background: transparent linear-gradient(271deg, #00438c 0%, #1265da 100%) 0%
+        0% no-repeat padding-box !important;
     font-size: 15px;
     border: none !important;
     padding: 11px 20px;
@@ -1088,7 +1095,7 @@ select {
     color: #fff !important;
     margin: auto;
     display: block;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .studentSayAbout {
@@ -1151,11 +1158,11 @@ select {
 .sayAboutSlider .item.slick-slide {
     width: 500px;
     height: 250px !important;
-    transition: transform .4s;
+    transition: transform 0.4s;
     position: relative;
     overflow: hidden;
     padding: 20px;
-    opacity: .4;
+    opacity: 0.4;
 }
 
 .sayAboutSlider .slick-list {
@@ -1163,7 +1170,7 @@ select {
 }
 
 .sayAbout {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 6px #00000029;
     border-radius: 7px;
     padding: 20px;
@@ -1207,7 +1214,7 @@ select {
     height: 50px;
     border-radius: 100px;
     overflow: hidden;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 3px 6px #00000029;
     margin: 0;
 }
@@ -1227,7 +1234,7 @@ select {
 .hovertext2,
 .hovertext1 {
     margin: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .hovertextMain:hover .hovertext2 {
@@ -1250,7 +1257,7 @@ select {
 }
 
 .advantagesSection {
-    background: #F6F6EE;
+    background: #f6f6ee;
     padding: 50px 0;
 }
 
@@ -1261,35 +1268,36 @@ select {
     border: none !important;
 }
 
-.benefitsTab>li {
+.benefitsTab > li {
     width: 150px;
 }
 
-.benefitsTab>li .nav-link {
-    background: #FFFFFF;
+.benefitsTab > li .nav-link {
+    background: #ffffff;
     box-shadow: 0px 0px 6px #00000029;
     border-radius: 6px;
     width: 150px;
     height: 150px;
     font-size: 15px;
-    color: #30C768;
+    color: #30c768;
     font-weight: 500;
     border: none !important;
 }
 
-.benefitsTab>li .nav-link.active {
-    background: #30C768;
+.benefitsTab > li .nav-link.active {
+    background: #30c768;
     color: #fff;
 }
 
-.benefitsTab>li .nav-link.active img {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(300%) contrast(100%)
+.benefitsTab > li .nav-link.active img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(300%) contrast(100%);
 }
 
 .benefitContent h4 {
     font-size: 16px;
     font-weight: 700;
-    color: #11171D;
+    color: #11171d;
     position: relative;
     padding: 5px 0 5px 20px;
 }
@@ -1301,7 +1309,7 @@ select {
     left: 0;
     width: 3px;
     height: 30px;
-    background: #30C768;
+    background: #30c768;
 }
 
 .benefitContent ul {
@@ -1347,8 +1355,8 @@ select {
 }
 
 .blogContent {
-    background: #FFFFFF;
-    border: 1px solid #DDDDDD;
+    background: #ffffff;
+    border: 1px solid #dddddd;
     border-radius: 7px;
     overflow: hidden;
     padding: 7px 7px 14px;
@@ -1364,7 +1372,7 @@ figure.blogImg img {
     height: 170px;
     object-fit: cover;
     border-radius: 6px;
-    transition: .3s all;
+    transition: 0.3s all;
     transform: scale(1);
 }
 
@@ -1376,7 +1384,7 @@ figure.blogImg img {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #00BE55;
+    color: #00be55;
     margin-bottom: 10px;
 }
 
@@ -1396,12 +1404,12 @@ figure.blogImg img {
 }
 
 .blogContent h4 a:hover {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .blogContent p {
     font-size: 13px;
-    color: #A3A3A3;
+    color: #a3a3a3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1419,9 +1427,9 @@ figure.blogImg img {
     height: 40px;
     border-radius: 100px;
     overflow: hidden;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 3px 6px #00000029;
-    border: 2px solid #00BE55;
+    border: 2px solid #00be55;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1441,20 +1449,20 @@ figure.blogImg img {
     font-weight: 500;
 }
 
-.recentBlogList>li {
+.recentBlogList > li {
     display: block;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #e3e3e3;
 }
 
-.recentBlogList>li strong {
+.recentBlogList > li strong {
     font-size: 15px;
     display: block;
     margin-bottom: 5px;
 }
 
-.recentBlogList>li a {
+.recentBlogList > li a {
     color: #044783;
     text-decoration: underline;
     font-size: 13px;
@@ -1537,15 +1545,15 @@ figure.blogImg img {
 }
 
 .loginFormBox h3::after {
-    content: '';
-    background: transparent linear-gradient(90deg, #044783 0%, #00C056 100%) 0% 0% no-repeat padding-box;
+    content: "";
+    background: transparent linear-gradient(90deg, #044783 0%, #00c056 100%) 0%
+        0% no-repeat padding-box;
     border-radius: 10px;
     position: absolute;
     bottom: -6px;
     left: 0;
     width: 60px;
     height: 3px;
-
 }
 
 .loginFormBox p {
@@ -1564,7 +1572,7 @@ figure.blogImg img {
 .loginFormBox select {
     height: 40px;
     border-radius: 4px;
-    border: 1px solid #EBD8D8;
+    border: 1px solid #ebd8d8;
     font-size: 14px;
 }
 
@@ -1602,11 +1610,13 @@ figure.blogImg img {
 }
 
 .cstmCheckbox label:before {
-    content: '';
+    content: "";
     -webkit-appearance: none;
     background-color: transparent;
-    border: 1px solid #C9C9C9;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #c9c9c9;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     padding: 8px;
     display: inline-block;
     vertical-align: middle;
@@ -1618,8 +1628,8 @@ figure.blogImg img {
     left: 0;
 }
 
-.cstmCheckbox input:checked+label:after {
-    content: '';
+.cstmCheckbox input:checked + label:after {
+    content: "";
     display: block;
     position: absolute;
     top: 2px;
@@ -1631,7 +1641,7 @@ figure.blogImg img {
     transform: rotate(45deg);
 }
 
-.cstmCheckbox input:checked+label:before {
+.cstmCheckbox input:checked + label:before {
     background: #079848;
     border-color: #079848;
 }
@@ -1646,7 +1656,7 @@ figure.blogImg img {
 }
 
 .signupTxt a {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .lineotp {
@@ -1656,24 +1666,23 @@ figure.blogImg img {
     color: #8f8499;
     text-align: center;
     margin: 30px 0;
-
 }
 
 .lineotp b {
     background-color: #fff;
     padding: 0px 10px;
     font-weight: 500;
-    color: #00438C;
+    color: #00438c;
     font-size: 11px;
 }
 
 .lineotp b a {
-    color: #00438C;
+    color: #00438c;
     font-weight: 600;
 }
 
 .lineotp::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #f6f6f6;
     top: 10px;
@@ -1698,12 +1707,11 @@ figure.blogImg img {
     top: 10px;
     right: 10px;
     font-size: 12px;
-    color: #30C768;
+    color: #30c768;
 }
 
-
 .textUnderline {
-    color: #30C768;
+    color: #30c768;
     text-decoration: underline;
     font-size: 12px;
     font-weight: 500;
@@ -1730,12 +1738,9 @@ figure.blogImg img {
 }
 
 .timing b {
-    color: #30C768;
+    color: #30c768;
     font-weight: 500;
-
 }
-
-
 
 .otpMain strong {
     color: #044783;
@@ -1757,8 +1762,9 @@ figure.blogImg img {
 }
 
 .modal-header h1::after {
-    content: '';
-    background: transparent linear-gradient(90deg, #044783 0%, #00C056 100%) 0% 0% no-repeat padding-box;
+    content: "";
+    background: transparent linear-gradient(90deg, #044783 0%, #00c056 100%) 0%
+        0% no-repeat padding-box;
     border-radius: 10px;
     position: absolute;
     bottom: -6px;
@@ -1773,17 +1779,16 @@ figure.blogImg img {
     background-size: 22px;
     box-shadow: none;
     opacity: 100%;
-
 }
 
-.sliderAbout .item>img {
+.sliderAbout .item > img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
     position: relative;
 }
 
-.aboutMain .sliderAbout .item>img {
+.aboutMain .sliderAbout .item > img {
     height: 45vh !important;
 }
 
@@ -1792,14 +1797,14 @@ figure.blogImg img {
 }
 
 .aboutMain::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     opacity: 100%;
     width: 100%;
     height: 100%;
     border-radius: 6px;
-    transition: .3s all;
+    transition: 0.3s all;
     top: 0;
     background-color: #00000080;
 }
@@ -1837,7 +1842,7 @@ figure.blogImg img {
 }
 
 .glanceRight::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 40px;
@@ -1851,25 +1856,22 @@ figure.blogImg img {
 }
 
 .moreSection {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     padding: 50px 0;
 }
 
 .mittsureLeft span {
     font-size: 18px;
-    color: #00438C;
+    color: #00438c;
     font-weight: 600;
     padding-bottom: 10px;
     display: block;
 }
 
 .moreSection::after {
-    content: '';
+    content: "";
     position: absolute;
-
-
 }
-
 
 .mittsureright .mainRight {
     width: 280px;
@@ -1877,14 +1879,11 @@ figure.blogImg img {
     margin: auto;
     object-fit: cover;
     position: relative;
-
 }
 
 .mittsureright .mainRight .mittsureImg {
     border-radius: 16px;
-
 }
-
 
 .mainRight .rocketImg {
     position: absolute;
@@ -1902,7 +1901,6 @@ figure.blogImg img {
     position: absolute;
     right: 40%;
     bottom: 0;
-
 }
 
 .text-primary {
@@ -1918,7 +1916,6 @@ figure.blogImg img {
     border-radius: 16px;
 }
 
-
 .visionSection .glanceRight {
     padding-left: 80px;
     padding-top: 10px;
@@ -1926,19 +1923,18 @@ figure.blogImg img {
     position: relative;
 }
 
-
 .visionLottie {
     position: absolute;
     left: -110px;
     top: -50px;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .mittsureLottie {
     position: absolute;
     left: -120px;
     top: 10px;
-    opacity: .4;
+    opacity: 0.4;
 }
 
 .moreSection {
@@ -1972,7 +1968,7 @@ figure.blogImg img {
     flex-wrap: wrap;
 }
 
-.listingStar>li {
+.listingStar > li {
     width: 25%;
     text-align: left;
     padding-left: 30px;
@@ -1982,17 +1978,15 @@ figure.blogImg img {
     margin-bottom: 10px;
 }
 
-.listingStar>li::before {
-    content: '\F586';
+.listingStar > li::before {
+    content: "\F586";
     font-family: bootstrap-icons;
-    background: -webkit-linear-gradient(#00BE55, #29D07B, #93FFDC);
+    background: -webkit-linear-gradient(#00be55, #29d07b, #93ffdc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     left: 0;
 }
-
-
 
 .visionMain .skillsBox3 figure {
     background-color: #efeff4;
@@ -2003,22 +1997,19 @@ figure.blogImg img {
 }
 
 .visionMain .skillsBox2 figure {
-    background-color: #E4FFEE;
+    background-color: #e4ffee;
 }
 
 .visionMain .skillsBox1 figure {
-    background-color: #DAF3F8;
+    background-color: #daf3f8;
 }
 
 .visionMain .skillsBox h3 {
     color: #000 !important;
 }
 
-
-
-
 .studentSay {
-    background: #F9F9FB url(../images/ellipse33.svg);
+    background: #f9f9fb url(../images/ellipse33.svg);
     background-position: right 10% top 20%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -2035,7 +2026,7 @@ figure.blogImg img {
 }
 
 .sayContent {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 21px;
     padding: 20px 25px 25px;
@@ -2071,7 +2062,7 @@ figure.blogImg img {
     transform: translateY(-50%);
     border-radius: 100px;
     border: none;
-    background: rgba(4, 71, 131, .7);
+    background: rgba(4, 71, 131, 0.7);
     color: #fff;
     z-index: 1;
 }
@@ -2082,28 +2073,26 @@ figure.blogImg img {
 
 .studentSaySlider .slick-next {
     right: 0;
-
 }
 
 .ourProagram {
-    background: #F9F9FB;
+    background: #f9f9fb;
     padding: 50px 0;
 }
 
-
 .programAccordion .card .card-header {
-    background: #E5F4EC;
+    background: #e5f4ec;
     font-size: 14px;
-    color: #30C768;
+    color: #30c768;
     font-weight: 500;
     padding: 20px 25px;
     border: none;
     border-radius: 10px;
-    transition: .35s all;
+    transition: 0.35s all;
 }
 
 .programAccordion .card .card-header[aria-expanded="true"] {
-    background: #30C768;
+    background: #30c768;
     color: #fff;
 }
 
@@ -2112,12 +2101,10 @@ figure.blogImg img {
 }
 
 .programContent {
-    background: #30C768;
+    background: #30c768;
     position: relative;
     padding: 30px;
 }
-
-
 
 .programContent figure {
     margin: 0;
@@ -2143,8 +2130,6 @@ figure.blogImg img {
     line-height: 24px;
     margin-bottom: 30px;
 }
-
-
 
 .activitieSection {
     padding: 60px 0;
@@ -2178,7 +2163,7 @@ figure.blogImg img {
     transform: translateY(-50%);
     border-radius: 100px;
     border: none;
-    background: rgba(0, 190, 85, .7);
+    background: rgba(0, 190, 85, 0.7);
     color: #fff;
     z-index: 1;
 }
@@ -2206,21 +2191,20 @@ figure.blogImg img {
 }
 
 .exclusiveBox {
-    background-color: #FAFAFA;
-    border: 1px solid #DDDDDD;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
     border-radius: 8px;
     padding: 10px;
     display: block;
 }
 
-.exclusiveBox>figure img {
+.exclusiveBox > figure img {
     width: 100%;
     height: 190px;
     object-fit: cover;
     border-radius: 4px;
-    transition: .3s all;
+    transition: 0.3s all;
     transform: scale(1);
-
 }
 
 .exclusiveBox:hover .blogImg img {
@@ -2228,7 +2212,7 @@ figure.blogImg img {
 }
 
 .exclusiveBox b {
-    color: #00BE55;
+    color: #00be55;
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
@@ -2236,9 +2220,8 @@ figure.blogImg img {
 }
 
 .exclusiveBox p {
-    color: #A3A3A3;
+    color: #a3a3a3;
     font-size: 12px;
-
 }
 
 .exclusiveBox h3 {
@@ -2248,14 +2231,13 @@ figure.blogImg img {
 }
 
 .blogsliderSection {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     padding: 100px 0px 0px;
 }
 
 .blogsliderleft {
     width: 60%;
     position: relative;
-
 }
 
 .blogsliderleft h3 {
@@ -2265,7 +2247,6 @@ figure.blogImg img {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
 }
 
 .blogsliderleft p {
@@ -2283,7 +2264,7 @@ figure.blogImg img {
 
 .techLine {
     position: relative;
-    color: #00BE55;
+    color: #00be55;
     padding-left: 80px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -2291,11 +2272,11 @@ figure.blogImg img {
 }
 
 .techLine::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0px;
     width: 70px;
-    background-color: #C2C2C2;
+    background-color: #c2c2c2;
     height: 2px;
     top: 10px;
 }
@@ -2304,7 +2285,6 @@ figure.blogImg img {
     position: relative;
     padding-right: 5px;
 }
-
 
 .sliderRight .imgoneSlider {
     width: 260px;
@@ -2317,7 +2297,6 @@ figure.blogImg img {
     display: flex;
     gap: 20px;
 }
-
 
 .knowMorebtn {
     position: absolute;
@@ -2353,7 +2332,7 @@ figure.blogImg img {
     position: absolute;
     top: auto;
     bottom: 0 !important;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     height: 58px;
     width: 58px;
     display: flex;
@@ -2408,7 +2387,6 @@ figure.blogImg img {
 
 .exclusiveInput input:focus {
     box-shadow: none;
-
 }
 
 .exclusiveInput input {
@@ -2420,7 +2398,7 @@ figure.blogImg img {
 
 .exclusiveInput input {
     min-width: 340px;
-    background-color: #F3F3F3 !important;
+    background-color: #f3f3f3 !important;
     font-size: 13px;
     height: 40px;
 }
@@ -2433,9 +2411,9 @@ figure.blogImg img {
 }
 
 .blogTxt strong::before {
-    content: '';
+    content: "";
     position: absolute;
-    background-color: #00438C20;
+    background-color: #00438c20;
     width: 70px;
     height: 40px;
     bottom: -4px;
@@ -2447,11 +2425,10 @@ figure.blogImg img {
     display: flex;
     align-items: center;
     justify-content: end;
-
 }
 
 .articalMain {
-    background-color: #00438C;
+    background-color: #00438c;
     padding: 20px 30px 20px 130px;
 }
 
@@ -2460,13 +2437,12 @@ figure.blogImg img {
     height: 70px;
     object-fit: cover;
     border-radius: 6px;
-
 }
 
 .vrLine {
     width: 70px;
     height: 5px;
-    background-color: #00BE55;
+    background-color: #00be55;
     display: block;
     position: absolute;
     right: -30px;
@@ -2474,7 +2450,6 @@ figure.blogImg img {
     z-index: 10;
     border-radius: 30px;
     rotate: 90deg;
-
 }
 
 .articalMain h4 {
@@ -2505,18 +2480,17 @@ figure.blogImg img {
     gap: 16px;
     padding: 8px 8px;
     border: 1px solid #70707000;
-    transition: .3s;
+    transition: 0.3s;
     margin-bottom: 10px;
-
 }
 
 .artificialBx:hover {
-    background-color: #FFFFFF30;
+    background-color: #ffffff30;
     box-shadow: 0px 0px 6px #00000029;
 }
 
 .artificialBx:hover .arrowGreen {
-    background-color: #00BE55;
+    background-color: #00be55;
 }
 
 .arrowGreen {
@@ -2524,34 +2498,30 @@ figure.blogImg img {
     border: 1px solid #fff;
     color: #fff;
     border-radius: 4px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .articalBlog {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     padding: 100px 0px 20px;
-
 }
 
 .articalBlog figure.blogImg img {
     height: 450px;
     border-radius: 0;
-
 }
 
 .articalBlog h4 {
     font-size: 25px;
     font-weight: 700;
     padding-bottom: 5px;
-
 }
 
 .BlogtextMain {
     padding: 20px 0px;
-
 }
-.BlogtextMain li{
-        list-style: disc;
+.BlogtextMain li {
+    list-style: disc;
 }
 
 .BlogtextMain strong {
@@ -2565,8 +2535,6 @@ figure.blogImg img {
 .BlogtextMain p {
     margin: 0;
 }
-
-
 
 .blogRightSec {
     width: 66%;
@@ -2594,7 +2562,6 @@ figure.blogImg img {
     position: relative;
 }
 
-
 .exclusiveBox a {
     color: #000000;
     font-size: 15px;
@@ -2603,11 +2570,10 @@ figure.blogImg img {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
 }
 
 .exclusiveBox h4 a:hover {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .leadership {
@@ -2636,9 +2602,8 @@ figure.blogImg img {
     top: 0;
     width: calc(100% - 290px);
     height: 100%;
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     z-index: -1;
-
 }
 
 .leadershipContent:before {
@@ -2651,7 +2616,6 @@ figure.blogImg img {
     background-image: url(../images/ellipse.svg);
     background-size: contain;
     pointer-events: none;
-
 }
 
 .leaderImg {
@@ -2676,7 +2640,6 @@ figure.blogImg img {
     width: calc(100% - 360px);
     position: relative;
     padding: 20px 20px 20px 40px;
-
 }
 
 .leaderInfo strong {
@@ -2700,7 +2663,7 @@ figure.blogImg img {
 }
 
 .leaders {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     background-image: url(../images/bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -2710,7 +2673,7 @@ figure.blogImg img {
 .leadertxt {
     display: flex;
     flex-wrap: wrap;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 6px #00000029;
 }
 
@@ -2756,7 +2719,6 @@ figure.blogImg img {
     padding-right: 10px;
 }
 
-
 .leaderDetail p {
     font-size: 13px;
     line-height: 24px;
@@ -2764,14 +2726,14 @@ figure.blogImg img {
 }
 
 .leaderDetail span {
-    color: rgba(0, 0, 0, .7);
+    color: rgba(0, 0, 0, 0.7);
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .leaderDetail span b {
-    color: rgba(4, 71, 131, .7);
+    color: rgba(4, 71, 131, 0.7);
     font-weight: 600;
 }
 
@@ -2779,7 +2741,7 @@ figure.blogImg img {
     display: inline-block;
     margin-left: 10px;
     padding-left: 10px;
-    border-left: 2px solid #00BE55;
+    border-left: 2px solid #00be55;
 }
 
 .viewCategory label {
@@ -2798,7 +2760,7 @@ figure.blogImg img {
 }
 
 .bg-light {
-    background: #F8F8F2 !important;
+    background: #f8f8f2 !important;
 }
 
 .viewCourse .blogProfile figure img,
@@ -2817,14 +2779,14 @@ figure.blogImg img {
     line-height: 16px;
 }
 
-.viewCourse .coursesBox>figure {
+.viewCourse .coursesBox > figure {
     position: relative;
     margin-bottom: 30px;
 }
 
 .viewCourse .labelTxt {
     font-size: 12px;
-    background: #F3CA8C;
+    background: #f3ca8c;
     color: #000;
     padding: 5px 13px;
     border-radius: 3px;
@@ -2834,7 +2796,7 @@ figure.blogImg img {
 }
 
 .courseBanner {
-    background: #F6F6EE url(../images/course-banner.svg);
+    background: #f6f6ee url(../images/course-banner.svg);
     background-size: cover;
     background-position: center bottom;
     padding: 100px 0 60px;
@@ -2865,7 +2827,7 @@ figure.blogImg img {
 }
 
 .courseBanner2 {
-    background: #F6F6EE url(../images/course-banner2.jpg);
+    background: #f6f6ee url(../images/course-banner2.jpg);
     background-size: cover;
     background-position: center bottom;
     padding-bottom: 70px;
@@ -2878,38 +2840,30 @@ figure.blogImg img {
     right: -10%;
 }
 
-
-
-
 .contactBanner {
-    background: #F6F6EE;
+    background: #f6f6ee;
     padding: 120px 0 100px;
     position: relative;
-
 }
 
 .contactBanner .bannerTxt h1 {
     font-size: 45px;
-
 }
 
 .offeringsBanner {
-    background: #F6F6EE;
+    background: #f6f6ee;
     padding: 80px 0 60px;
     position: relative;
-
 }
 
 .offeringsBanner .bannerTxt h1 {
     font-size: 45px;
-
 }
 
 .lottieSquare {
     position: absolute;
     top: 160px;
     left: 40px;
-
 }
 
 .squareImg {
@@ -2951,13 +2905,13 @@ figure.blogImg img {
 }
 
 .sendMessage {
-    background-color: #F8F8F2;
+    background-color: #f8f8f2;
     padding: 25px 40px;
 }
 
 .sendMessage h6 {
     font-size: 16px;
-    color: #00438C;
+    color: #00438c;
     font-weight: 700;
     text-align: center;
 }
@@ -2967,12 +2921,11 @@ figure.blogImg img {
     font-weight: 300;
     text-align: center;
     margin-bottom: 30px;
-
 }
 
 .help-block2 p {
     width: 100% !important;
-    font-size: .875em !important;
+    font-size: 0.875em !important;
     color: red !important;
     font-weight: 300;
     text-align: left;
@@ -2991,7 +2944,7 @@ figure.blogImg img {
 }
 
 .sendMessage .form-control {
-    border: 1px solid #EBD8D8;
+    border: 1px solid #ebd8d8;
     border-radius: 4px;
     height: 40px;
     font-size: 13px;
@@ -3006,7 +2959,6 @@ figure.blogImg img {
     width: 100%;
     height: 530px;
     object-fit: cover;
-
 }
 
 .messageMain {
@@ -3017,7 +2969,7 @@ figure.blogImg img {
 .askQueations .accordion-button {
     font-size: 13px;
     font-weight: 600;
-    background-color: #F4F5FF !important;
+    background-color: #f4f5ff !important;
     border-radius: 6px;
 }
 
@@ -3031,7 +2983,6 @@ figure.blogImg img {
 .askQueations .accordion-item {
     margin-bottom: 10px;
     border: 0;
-
 }
 
 .askQueations .accordion-button:not(.collapsed) {
@@ -3040,23 +2991,18 @@ figure.blogImg img {
     border-bottom-left-radius: 0;
 }
 
-
 .askQueations .accordion-button .collaps {
     background-color: #000;
-
 }
-
 
 .askQueations .accordion-button::after {
     background-size: 12px;
     background-image: url(../images/arrowIcon.svg);
     height: 9px;
-
 }
 
 .askQueations button:focus:not(:focus-visible) {
     box-shadow: none;
-
 }
 
 .messageMain .lottieRactangle {
@@ -3069,8 +3015,8 @@ figure.blogImg img {
     margin: 40px 0;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
-    content: ' \F285';
+.breadcrumb-item + .breadcrumb-item::before {
+    content: " \F285";
     font-family: bootstrap-icons;
     font-size: 14px;
 }
@@ -3081,7 +3027,7 @@ figure.blogImg img {
 }
 
 .breadcrumb li a {
-    color: #B8B8B8;
+    color: #b8b8b8;
     font-weight: 500;
     font-size: 14px;
 }
@@ -3095,7 +3041,6 @@ figure.blogImg img {
     display: flex;
     gap: 6px;
     margin-bottom: 30px;
-
 }
 
 .ViewTabs .nav-link {
@@ -3105,7 +3050,6 @@ figure.blogImg img {
     font-weight: 500;
     border-radius: 100px;
     color: #707070;
-
 }
 
 .ViewTabs .nav-link.active {
@@ -3115,7 +3059,7 @@ figure.blogImg img {
 }
 
 .btnCopy {
-    background-color: #00BE55 !important;
+    background-color: #00be55 !important;
     color: #fff !important;
     font-size: 13px;
     border-radius: 0;
@@ -3138,8 +3082,6 @@ figure.blogImg img {
     padding-right: 75px;
     border: 1px solid #000;
     outline: none;
-
-
 }
 
 .shareCourse input:focus {
@@ -3155,14 +3097,13 @@ figure.blogImg img {
 
 .cartsImag {
     box-shadow: 0px 0px 6px #00000029;
-
 }
 
 .cartContent {
     padding: 0px 10px;
 }
 
-.cartContent>span {
+.cartContent > span {
     color: #000;
     font-weight: 600;
     font-size: 20px;
@@ -3171,15 +3112,14 @@ figure.blogImg img {
 }
 
 .cartContent .lineThr {
-    color: #B8B8B8;
+    color: #b8b8b8;
     font-weight: 500;
     text-decoration: line-through;
     font-size: 13px;
-
 }
 
 .textRed {
-    color: #D10000;
+    color: #d10000;
     font-size: 13px;
     font-weight: 500;
 }
@@ -3187,15 +3127,14 @@ figure.blogImg img {
 .access {
     font-size: 12px !important;
     padding: 0px 20px;
-    color: #B8B8B8 !important;
+    color: #b8b8b8 !important;
     font-weight: 400 !important;
     text-align: center;
     padding-bottom: 20px;
     display: block;
-
 }
 
-.cartsImag .imageMain>img {
+.cartsImag .imageMain > img {
     width: 100%;
     height: 165px;
     object-fit: cover;
@@ -3207,7 +3146,7 @@ figure.blogImg img {
 }
 
 .cartsImag .imageMain::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -3215,8 +3154,6 @@ figure.blogImg img {
     width: 100%;
     height: 100%;
     border-radius: 4px;
-
-
 }
 
 .playBtn {
@@ -3264,7 +3201,6 @@ figure.blogImg img {
     margin: auto auto 10px;
     font-size: 16px;
     font-weight: 500;
-
 }
 
 .detailList {
@@ -3325,14 +3261,14 @@ figure.blogImg img {
     margin: -10px;
 }
 
-.popularList>li {
+.popularList > li {
     width: 33.33%;
-    padding: 10px
+    padding: 10px;
 }
 
 .instructorTxt {
-    background: #F6F6F6 0% 0% no-repeat padding-box;
-    border: 1px solid #DDD9D9;
+    background: #f6f6f6 0% 0% no-repeat padding-box;
+    border: 1px solid #ddd9d9;
     display: flex;
     align-items: center;
     padding: 13px;
@@ -3375,7 +3311,7 @@ figure.blogImg img {
 }
 
 .clientReview {
-    background: #F1F8FE url(../images/reviewBg.png);
+    background: #f1f8fe url(../images/reviewBg.png);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 600px;
@@ -3415,7 +3351,7 @@ figure.blogImg img {
 }
 
 .courseBanner3 {
-    background: #F6F6EE;
+    background: #f6f6ee;
     padding: 130px 0 60px;
     position: relative;
 }
@@ -3430,7 +3366,7 @@ figure.blogImg img {
 }
 
 .courseBanner3 .bannerTxt h1 b {
-    color: #30C768;
+    color: #30c768;
 }
 
 .courseBanner3 .lottieSquare {
@@ -3442,7 +3378,6 @@ figure.blogImg img {
 
 /*  */
 
-
 .lottieCourse {
     position: absolute;
     bottom: 0;
@@ -3450,7 +3385,7 @@ figure.blogImg img {
 }
 
 .aboutBg {
-    background-color: #F1F8FE;
+    background-color: #f1f8fe;
 }
 
 .aboutBg {
@@ -3473,14 +3408,14 @@ figure.blogImg img {
 }
 
 .requirementInner {
-    background-color: #F6FBFE;
+    background-color: #f6fbfe;
     max-width: 700px;
     padding: 25px 20px;
     position: relative;
 }
 
 .requirementInner::after {
-    content: '';
+    content: "";
     background-image: url(../images/yellow-round.svg);
     background-repeat: no-repeat;
     background-position: top right 10px;
@@ -3498,7 +3433,6 @@ figure.blogImg img {
 
 .needOnly {
     margin: 50px 0;
-
 }
 
 .needBox {
@@ -3531,7 +3465,6 @@ figure.blogImg img {
 
 .headingsections span {
     font-weight: 500;
-
 }
 
 .curriculumAcrdn button {
@@ -3540,25 +3473,22 @@ figure.blogImg img {
     padding-left: 50px;
     font-weight: 600;
     font-size: 14px;
-    background-color: #F7F9FA;
+    background-color: #f7f9fa;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #F7F9FA;
-
+    background-color: #f7f9fa;
 }
 
 .curriculumAcrdn button span {
     font-weight: 400;
     color: #707070;
     font-size: 13px;
-
 }
 
 .curriculumAcrdn .accordion-button::after {
     position: absolute;
     left: 16px;
-
 }
 
 .accordianInner figure img {
@@ -3590,7 +3520,7 @@ figure.blogImg img {
 }
 
 .accordianInner strong i {
-    color: #F8B84E;
+    color: #f8b84e;
 }
 
 .accordianInner {
@@ -3598,7 +3528,6 @@ figure.blogImg img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
 }
 
 .accordianInner .button:focus(.collapsed) {
@@ -3644,7 +3573,7 @@ figure.blogImg img {
 }
 
 #coursePreview .modal-content {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
 }
 
@@ -3664,11 +3593,11 @@ figure.blogImg img {
 
 .studyMat .requirementInner {
     max-width: 100%;
-    background-color: #F8F8F270;
+    background-color: #f8f8f270;
 }
 
 .studyMaterials {
-    background-color: #F6F6EE;
+    background-color: #f6f6ee;
     padding: 140px 0px 10px;
     margin-bottom: 40px;
 }
@@ -3676,7 +3605,6 @@ figure.blogImg img {
 .studyMaterials .bannerTxt h1 {
     font-size: 30px;
     margin-bottom: 8px;
-
 }
 
 .materialsInner {
@@ -3689,12 +3617,10 @@ figure.blogImg img {
     position: absolute;
     left: -130px;
     bottom: -60px;
-
 }
 
-
 .overView {
-    background-color: #F8F8F270;
+    background-color: #f8f8f270;
     padding: 25px 20px;
 }
 
@@ -3702,11 +3628,10 @@ figure.blogImg img {
     margin-bottom: 18px;
 }
 
-.createUl>li {
+.createUl > li {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
-
 }
 
 .overView {
@@ -3787,7 +3712,7 @@ figure.blogImg img {
     height: 40px;
     width: 250px;
     max-width: 250px;
-    background-color: #F7F7F7 !important;
+    background-color: #f7f7f7 !important;
     border: 0;
     border-radius: 4px;
     font-size: 14px;
@@ -3798,16 +3723,13 @@ figure.blogImg img {
     box-shadow: none;
 }
 
-
-
-
 .siderBar {
     position: fixed;
     top: 66px;
     left: -100%;
     width: 290px;
     height: 100vh;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
 .sideMenu {
@@ -3815,15 +3737,12 @@ figure.blogImg img {
     height: 100%;
     background: #fff;
     /* padding: 30px 20px; */
-
 }
 
 .menuList {
     /* padding: 30px 20px; */
     padding: 20px 20px 12px 20px;
-
 }
-
 
 .sideMenuscrl {
     height: calc(100% - 55px);
@@ -3831,13 +3750,11 @@ figure.blogImg img {
     overflow-y: auto;
 }
 
-
-
-.menuList>li {
+.menuList > li {
     display: block;
 }
 
-.menuList>li a {
+.menuList > li a {
     display: flex;
     align-items: center;
     color: #000;
@@ -3847,35 +3764,34 @@ figure.blogImg img {
     margin-bottom: 6px;
 }
 
-.menuList>li a.active {
-    background-color: #30C768;
+.menuList > li a.active {
+    background-color: #30c768;
     border-radius: 6px;
     color: #fff;
 }
 
-.menuList>li a:hover {
-    background-color: #30C768;
+.menuList > li a:hover {
+    background-color: #30c768;
     border-radius: 6px;
     color: #fff;
 }
 
-.menuList>li a:hover img {
-    filter: invert(1);
-
-}
-
-.menuList>li a.active img {
+.menuList > li a:hover img {
     filter: invert(1);
 }
 
+.menuList > li a.active img {
+    filter: invert(1);
+}
 
 .paymentBox {
-    background: transparent linear-gradient(129deg, #00BE55 0%, #29D07B 54%, #93FFDC 100%) 0% 0% no-repeat padding-box;
+    background: transparent
+        linear-gradient(129deg, #00be55 0%, #29d07b 54%, #93ffdc 100%) 0% 0%
+        no-repeat padding-box;
     padding: 10px 20px;
     border-radius: 16px;
     text-align: center;
     margin: 60px 20px 20px;
-
 }
 
 .paymentBox p {
@@ -3901,11 +3817,10 @@ figure.blogImg img {
     align-items: center;
     justify-content: center;
     margin: -40px auto 20px;
-    animation: blink .8s ease-in-out infinite none;
+    animation: blink 0.8s ease-in-out infinite none;
     position: relative;
     z-index: 1;
 }
-
 
 @keyframes blink {
     0% {
@@ -3919,7 +3834,7 @@ figure.blogImg img {
 
 .dashboardMain {
     padding: 80px 15px 15px 305px;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
 .alertsSec {
@@ -3943,8 +3858,7 @@ figure.blogImg img {
 }
 
 .alertsSec h3 {
-    color: #30C768;
-
+    color: #30c768;
 }
 
 .alertList a {
@@ -3957,15 +3871,14 @@ figure.blogImg img {
 }
 
 .alertList a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 6px;
     top: 6px;
-    background-color: #30C768;
+    background-color: #30c768;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-
 }
 
 .adminBx h6 {
@@ -3973,7 +3886,6 @@ figure.blogImg img {
     font-weight: 600;
     display: flex;
     align-items: center;
-
 }
 
 .adminBx {
@@ -3989,7 +3901,7 @@ figure.blogImg img {
 }
 
 .adminBx p b.text-success {
-    color: #00BE55 !important;
+    color: #00be55 !important;
 }
 
 .adminBx span {
@@ -4010,14 +3922,13 @@ figure.blogImg img {
     text-align: end;
     font-weight: 600;
     font-size: 14px;
-
 }
 
 .countBx span b {
     display: block;
     font-weight: 500;
     font-size: 18px;
-    color: #30C768;
+    color: #30c768;
 }
 
 .countBx p {
@@ -4043,9 +3954,8 @@ figure.blogImg img {
     min-width: 120px;
     font-size: 12px;
     border-radius: 4px;
-    border: 1px solid #BBBABA;
+    border: 1px solid #bbbaba;
     font-weight: 500;
-
 }
 
 .headingBx h4 {
@@ -4069,19 +3979,17 @@ figure.blogImg img {
     max-height: 243px;
     overflow: auto;
     padding-right: 5px;
-
 }
 
-.listingUl>li figure img {
+.listingUl > li figure img {
     width: 45px;
     height: 45px;
     border-radius: 4px;
     object-fit: cover;
     max-width: 55px;
-
 }
 
-.listingUl>li span {
+.listingUl > li span {
     color: #000;
     font-size: 13px;
     font-weight: 500;
@@ -4089,15 +3997,15 @@ figure.blogImg img {
     display: block;
 }
 
-.listingUl>li {
+.listingUl > li {
     padding: 6px;
     border-radius: 4px;
-    border: 0.20px solid #aaaaaa;
-    background-color: #FAFBFF;
+    border: 0.2px solid #aaaaaa;
+    background-color: #fafbff;
     margin-bottom: 6px;
 }
 
-.listingUl>li b {
+.listingUl > li b {
     display: flex;
     align-items: center;
     color: #707070;
@@ -4116,7 +4024,7 @@ figure.blogImg img {
 }
 
 .tbleDiv .table tbody tr td {
-    color: #4B4B4B;
+    color: #4b4b4b;
     font-size: 12px;
     font-weight: 500;
     padding: 10px 15px;
@@ -4140,23 +4048,23 @@ figure.blogImg img {
     padding-right: 5px;
 }
 
-.classesUl>li {
+.classesUl > li {
     display: block;
     margin-bottom: 10px;
 }
 
 .plannedList {
-    border: 1px solid #CCC6C6;
-    padding: 7px;
+    border: 1px solid #ccc6c6;
+    /* padding: 7px; */
+    padding: 4px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 3px;
 }
 
 .planUser {
-    width: 50%;
+    width: 40%;
     padding-right: 10px;
-
 }
 
 .plannedList figure {
@@ -4168,12 +4076,13 @@ figure.blogImg img {
     height: 45px;
     border-radius: 4px;
     object-fit: cover;
-
 }
 
 .plannedList h4 {
     color: #000;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-left: 14px;
 }
 
 .plannedList span {
@@ -4193,8 +4102,8 @@ figure.blogImg img {
 }
 
 .plannedList strong {
-    width: 25%;
-    color: #CCC6C6;
+    width: 30%;
+    color: #ccc6c6;
     font-size: 11px;
     font-weight: 500;
     border-left: 1px solid #bbbbbb;
@@ -4206,6 +4115,7 @@ figure.blogImg img {
     color: #000;
     font-size: 14px;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 .downloadBtn {
@@ -4216,10 +4126,7 @@ figure.blogImg img {
     min-width: 30px;
 }
 
-
-
 /* css addd updated 22-10-2024 */
-
 
 /* .teacherMain .teacherLeft {
     width: 70%;
@@ -4253,8 +4160,7 @@ figure.blogImg img {
     border-radius: 30px;
     padding-left: 35px;
     font-size: 13px;
-    border: 1px solid #B9B7B7;
-
+    border: 1px solid #b9b7b7;
 }
 
 .tableSearch input:focus {
@@ -4273,7 +4179,7 @@ figure.blogImg img {
 .schoolDropdown .dropdown-menu {
     border: none;
     background: #fff;
-    box-shadow: 0px 0px 16px #0000001A;
+    box-shadow: 0px 0px 16px #0000001a;
     border-radius: 6px;
     padding: 5px;
 }
@@ -4290,27 +4196,24 @@ figure.blogImg img {
 .tbleDiv .dropdown-item:hover,
 .teacherrightTable .dropdown-item:hover,
 .schoolDropdown .dropdown-item:hover {
-    color: #4D91CC;
-    background: #F2F2F2;
+    color: #4d91cc;
+    background: #f2f2f2;
 }
 
 .teacherrightTable button img {
     width: 16px;
     height: 16px;
-    transition: .3s;
-
+    transition: 0.3s;
 }
 
 .teacherrightTable button span {
     padding: 8px 10px !important;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-
 .teacherrightTable button span:hover {
-    background-color: #C9D6EF !important;
+    background-color: #c9d6ef !important;
     border-radius: 100px;
-
 }
 
 .headerTbl {
@@ -4318,7 +4221,7 @@ figure.blogImg img {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #DAE1F3;
+    background-color: #dae1f3;
 }
 
 .teacherrightTable {
@@ -4329,7 +4232,6 @@ figure.blogImg img {
 
 .tooltip {
     font-size: 12px;
-
 }
 
 .nameTbl {
@@ -4345,15 +4247,15 @@ figure.blogImg img {
 }
 
 .activeTxt {
-    color: #2C896C;
-    background-color: #D9E8E4;
+    color: #2c896c;
+    background-color: #d9e8e4;
     padding: 6px 10px;
     border-radius: 4px;
 }
 
 .deactiveTxt {
-    color: #FF0000;
-    background-color: #FCD3D3;
+    color: #ff0000;
+    background-color: #fcd3d3;
     padding: 6px 10px;
     border-radius: 4px;
 }
@@ -4375,7 +4277,7 @@ figure.blogImg img {
 }
 
 .formPanel b {
-    color: #E12D20;
+    color: #e12d20;
 }
 
 .formPanel .form-control::placeholder {
@@ -4386,7 +4288,7 @@ figure.blogImg img {
 .formPanel .form-group select,
 .formPanel .form-group textarea {
     font-size: 13px;
-    border: 1px solid #B9B9B9;
+    border: 1px solid #b9b9b9;
     height: 40px;
     border-radius: 4px;
 }
@@ -4417,17 +4319,14 @@ figure.blogImg img {
 
 .dateBirth {
     background-image: url(../images/calender-icon.svg) !important;
-
 }
 
 .email {
     background-image: url(../images/email-icon.svg) !important;
-
 }
 
 .mobile {
     background-image: url(../images/mobile-icon.svg) !important;
-
 }
 
 .qualification {
@@ -4438,7 +4337,6 @@ figure.blogImg img {
 .code {
     background-image: url(../images/code-icon.svg) !important;
     background-size: 14px !important;
-
 }
 
 .backbtn {
@@ -4448,7 +4346,6 @@ figure.blogImg img {
     padding: 0px 2px;
     font-size: 14px;
     font-weight: 600;
-
 }
 
 .backbtn:focus {
@@ -4462,13 +4359,13 @@ figure.blogImg img {
     margin: -5px;
 }
 
-.typeCheckList>li {
+.typeCheckList > li {
     width: auto;
     padding: 5px;
 }
 
-.typeCheck input[type="checkbox"]:checked~label {
-    background: #E4F2FF;
+.typeCheck input[type="checkbox"]:checked ~ label {
+    background: #e4f2ff;
     border: 2px solid #0c59be;
     color: #0c59be !important;
 }
@@ -4485,11 +4382,11 @@ figure.blogImg img {
     justify-content: center;
     gap: 4px;
     margin: 0;
-    transition: .1s all;
+    transition: 0.1s all;
     cursor: pointer;
 }
 
-.typeCheck input[type="checkbox"]:checked~label i {
+.typeCheck input[type="checkbox"]:checked ~ label i {
     display: block;
     visibility: visible;
     overflow: visible;
@@ -4527,7 +4424,7 @@ figure.blogImg img {
 }
 
 .pagination .page-link {
-    color: #304C9F;
+    color: #304c9f;
     font-size: 14px;
 }
 
@@ -4535,8 +4432,6 @@ figure.blogImg img {
     background: #00376a;
     color: #fff;
 }
-
-
 
 .switchTbl .form-check-input {
     width: 3em;
@@ -4556,8 +4451,8 @@ figure.blogImg img {
 }
 
 .switchTbl .form-check-input:checked {
-    background-color: #30C768;
-    border-color: #30C768;
+    background-color: #30c768;
+    border-color: #30c768;
 }
 
 .btnNo {
@@ -4594,7 +4489,6 @@ figure.blogImg img {
 .select2-container--default .select2-search--inline .select2-search__field {
     padding: 0px 10px !important;
     cursor: pointer !important;
-
 }
 
 .select2-results__option:before {
@@ -4603,22 +4497,21 @@ figure.blogImg img {
     position: relative;
     height: 18px;
     width: 18px;
-    border: 1px solid #B9B9B9;
+    border: 1px solid #b9b9b9;
     border-radius: 3px;
     background-color: #fff;
     margin-right: 10px;
     vertical-align: middle;
 }
 
-.select2-results__option[aria-selected=true]:before {
+.select2-results__option[aria-selected="true"]:before {
     font-family: "bootstrap-icons";
     content: "\F633";
     color: #fff;
-    background-color: #00438C;
+    background-color: #00438c;
     border: 0;
     display: inline-block;
     padding-left: 3px;
-
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
@@ -4630,60 +4523,57 @@ figure.blogImg img {
     user-select: none;
     -webkit-user-select: none;
     font-size: 12px !important;
-
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #DCE9FE !important;
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    background-color: #dce9fe !important;
     font-size: 12px !important;
     padding: 4px 10px !important;
     border: none !important;
-
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
     color: #000000;
     font-weight: bold;
     margin-right: 8px !important;
 }
 
-.select2-container--default .select2-results__option[aria-selected=true] {
+.select2-container--default .select2-results__option[aria-selected="true"] {
     background: none !important;
 }
 
-.select2-container--default .select2-results__option--highlighted[aria-selected=true] {
+.select2-container--default
+    .select2-results__option--highlighted[aria-selected="true"] {
     color: #000 !important;
 }
 
-.logsUl>li {
+.logsUl > li {
     margin-bottom: 40px;
-
 }
 
-.logsUl>li:last-child {
+.logsUl > li:last-child {
     margin-bottom: 10px;
-
 }
 
-
-.logsUl>li span {
+.logsUl > li span {
     color: #000;
     font-size: 14px;
     font-weight: 500;
-
 }
 
-.logsUl>li strong {
-    color: #B6B6B6;
+.logsUl > li strong {
+    color: #b6b6b6;
     font-weight: 500;
     font-size: 12px;
     display: flex;
     align-items: center;
-
-
 }
 
-.logsUl>li strong img {
+.logsUl > li strong img {
     width: 14px;
     height: 14px;
     margin-right: 8px;
@@ -4693,28 +4583,24 @@ figure.blogImg img {
     position: relative;
 }
 
-.logsUl>li .logsInner::after {
-    content: '';
+.logsUl > li .logsInner::after {
+    content: "";
     position: absolute;
     top: 35px;
     left: 17px;
     width: 2px;
-    background-color: #E7E8F3;
+    background-color: #e7e8f3;
     height: 55px;
     z-index: -1;
 }
 
-.logsUl>li:last-child .logsInner::after {
+.logsUl > li:last-child .logsInner::after {
     display: none;
 }
 
-
-
-.logsUl>li strong b {
+.logsUl > li strong b {
     font-weight: 500;
     padding-left: 12px;
-
-
 }
 
 .logsInner {
@@ -4769,7 +4655,6 @@ a.ui-button:active,
 .ui-icon-circle-triangle-e {
     background-image: url(../images/arrownxt.svg) !important;
     background-size: 7px;
-
 }
 
 .ui-icon-circle-triangle-w,
@@ -4798,7 +4683,6 @@ a.ui-button:active,
     background-image: url(../images/previous.svg) !important;
 } */
 
-
 /* planner css start  */
 .plannerHeader {
     display: flex;
@@ -4807,11 +4691,10 @@ a.ui-button:active,
 }
 
 .plannerHeader select {
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     font-size: 12px;
     border-radius: 30px;
     width: 100px;
-
 }
 
 .plannerHeader select:focus {
@@ -4821,7 +4704,6 @@ a.ui-button:active,
 .plannerHeader span {
     font-size: 13px;
     font-weight: 500;
-
 }
 
 .tableTop {
@@ -4833,16 +4715,15 @@ a.ui-button:active,
     gap: 24px;
 }
 
-.plannerUl>li {
+.plannerUl > li {
     position: relative;
     color: #000;
     font-weight: 500;
     font-size: 13px;
-
 }
 
-.plannerUl>li::after {
-    content: '';
+.plannerUl > li::after {
+    content: "";
     position: absolute;
     top: 4px;
     right: -12px;
@@ -4851,12 +4732,12 @@ a.ui-button:active,
     width: 2px;
 }
 
-.plannerUl>li:last-child::after {
+.plannerUl > li:last-child::after {
     display: none;
 }
 
 .tableTop {
-    background-color: #DAE1F3;
+    background-color: #dae1f3;
     margin: 10px 20px;
     border-radius: 6px 6px 0 0;
     display: flex;
@@ -4871,12 +4752,11 @@ a.ui-button:active,
 
 .planDetails .accordion-item {
     margin-bottom: 10px;
-
 }
 
 .planDetails .accordion-body {
     padding: 10px 10px;
-    border: 1px solid #D9D5D5;
+    border: 1px solid #d9d5d5;
     border-top: 0;
     border-radius: 0px 0px 4px 4px;
 }
@@ -4890,8 +4770,7 @@ a.ui-button:active,
     font-size: 14px;
     color: #000 !important;
     border-radius: 4px;
-    border: 1px solid #D9D5D5;
-
+    border: 1px solid #d9d5d5;
 }
 
 .planDetails .accordion-item button[aria-expanded="true"] {
@@ -4908,7 +4787,7 @@ a.ui-button:active,
 }
 
 .numbaring {
-    background-color: #E2DCED;
+    background-color: #e2dced;
     border-radius: 5px;
     padding: 10px 10px;
     font-weight: 600;
@@ -4927,7 +4806,7 @@ a.ui-button:active,
     padding-bottom: 16px;
 }
 
-.accordianUl>li:last-child {
+.accordianUl > li:last-child {
     padding-bottom: 0;
 }
 
@@ -4986,38 +4865,35 @@ a.ui-button:active,
     color: #707070;
     font-size: 14px;
     display: block;
-
 }
 
 .lessonDetail span {
     font-size: 14px;
     font-weight: 600;
-
 }
 
 .progress {
-    background-color: #CCC5C5;
+    background-color: #ccc5c5;
     height: 12px;
     border-radius: 30px;
 }
 
 .actualStatus {
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
     padding: 10px 14px;
 }
 
 .actualStatus .progress-bar {
-    background-color: #30C768;
+    background-color: #30c768;
 }
 
 .actualStatus b {
     font-size: 14px;
-    color: #30C768;
+    color: #30c768;
     font-weight: 500;
     padding-bottom: 10px;
     display: block;
-
 }
 
 .actualStatus span {
@@ -5055,7 +4931,7 @@ a.ui-button:active,
     height: 36px;
     width: 250px;
     max-width: 250px;
-    background-color: #F7F7F7 !important;
+    background-color: #f7f7f7 !important;
     border: 0;
     border-radius: 4px;
     font-size: 14px;
@@ -5069,34 +4945,31 @@ a.ui-button:active,
 .btnremoveBg {
     border: 0;
     background: transparent;
-
 }
 
 .btnSuccess {
-    background-color: #00BE55 !important;
+    background-color: #00be55 !important;
     padding: 8px 10px;
     font-size: 14px;
     border-radius: 4px;
     color: #fff;
-    border: 1px solid #00BE55;
+    border: 1px solid #00be55;
     cursor: pointer;
-
 }
 
 .fileUploded {
-    background-color: #F0F3F5;
+    background-color: #f0f3f5;
     padding: 10px;
     border-radius: 4px;
     max-width: 260px;
     margin-bottom: 14px;
-
 }
 
 .formPanel h6 {
     font-size: 14px;
 }
 
-.uploadInner>figure img {
+.uploadInner > figure img {
     width: 35px;
     height: 35px;
     max-width: 35px;
@@ -5105,7 +4978,7 @@ a.ui-button:active,
 .uploadInner {
     position: relative;
     background-color: #fff;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     border-radius: 4px;
     padding: 10px;
     display: flex;
@@ -5130,11 +5003,10 @@ a.ui-button:active,
 .crossbtn {
     border: 0;
     background-color: transparent;
-
 }
 
 .digitaluplBox {
-    background-color: #EEF7FE;
+    background-color: #eef7fe;
     padding: 20px 20px;
     border-radius: 6px;
     display: flex;
@@ -5142,7 +5014,7 @@ a.ui-button:active,
     gap: 10px;
 }
 
-.digitaluplBox>figure img {
+.digitaluplBox > figure img {
     width: 40px;
     height: 32px;
 }
@@ -5155,27 +5027,25 @@ a.ui-button:active,
 
 .digitaluplBox b {
     display: block;
-    color: #98989A;
+    color: #98989a;
     font-size: 11px;
     font-weight: 400;
 }
 
 .greenBx {
-    background-color: #DBF8EA;
+    background-color: #dbf8ea;
 }
 
 .purpleBx {
-    background-color: #F4EFFA;
+    background-color: #f4effa;
 }
 
 .yellowBx {
-    background-color: #F6F3E5;
+    background-color: #f6f3e5;
 }
 
 .folderChoosefile label {
     padding: 20px;
-
-
 }
 
 .folderChoosefile span {
@@ -5198,7 +5068,6 @@ a.ui-button:active,
 
 .classDetails .plannerHeader select {
     width: 140px;
-
 }
 
 .classesCourse {
@@ -5220,30 +5089,29 @@ a.ui-button:active,
 }
 
 .courseHeader b::after {
-    content: '';
+    content: "";
     position: absolute;
-    background-color: #C5C5C6;
+    background-color: #c5c5c6;
     top: 7px;
     left: -10px;
     border-radius: 50%;
     height: 5px;
     width: 5px;
-
 }
 
 .courseHeader b {
     font-size: 13px;
-    color: #C5C5C6;
+    color: #c5c5c6;
     position: relative;
     font-weight: 500;
 }
 
 .classesBx {
-    border: 1px solid #DBF3F3;
+    border: 1px solid #dbf3f3;
     border-radius: 6px;
     padding: 12px 15px;
     text-align: center;
-    background-color: #FCFDFD;
+    background-color: #fcfdfd;
 }
 
 .classesBx img {
@@ -5258,10 +5126,9 @@ a.ui-button:active,
 
 .classesBx p {
     font-size: 11px;
-    color: #98989A;
+    color: #98989a;
     margin: 0;
 }
-
 
 .myCourseLft figure {
     width: 90px;
@@ -5295,12 +5162,12 @@ a.ui-button:active,
 }
 
 .myCourses .tbleDiv .table {
-    border: 1px solid #C3C3C3;
+    border: 1px solid #c3c3c3;
 }
 
 .myCourses .tbleDiv .table tr th,
 .myCourses .tbleDiv .table tr td {
-    border-color: #C3C3C3;
+    border-color: #c3c3c3;
 }
 
 .myCourses .tbleDiv .table tr th {
@@ -5342,8 +5209,8 @@ a.ui-button:active,
 }
 
 .assignStatus {
-    color: #2C896C;
-    background: #D9E8E4;
+    color: #2c896c;
+    background: #d9e8e4;
     display: inline-block;
     font-size: 12px;
     padding: 4px 10px;
@@ -5364,14 +5231,14 @@ a.ui-button:active,
 }
 
 .viewAccess .tbleDiv .table tbody tr td a {
-    color: #4D91CC;
+    color: #4d91cc;
     font-style: italic;
     font-weight: 500;
     text-decoration: underline;
 }
 
 .accessDetail {
-    border: 1px solid #D1CACA;
+    border: 1px solid #d1caca;
     padding: 15px;
     border-radius: 4px;
 }
@@ -5389,7 +5256,7 @@ a.ui-button:active,
 .accessDetail p {
     margin: 0;
     font-size: 13px;
-    color: #A9A9A9;
+    color: #a9a9a9;
 }
 
 .viewAccess .progress-stacked {
@@ -5398,18 +5265,18 @@ a.ui-button:active,
     height: 6px;
 }
 
-.viewAccess .progress-stacked>.progress {
+.viewAccess .progress-stacked > .progress {
     overflow: visible;
     height: 6px;
 }
 
-.viewAccess .progress-stacked>.progress>.progress-bar {
+.viewAccess .progress-stacked > .progress > .progress-bar {
     width: 100%;
     border-radius: 100px;
 }
 
 .viewAccess .bg-success {
-    background: #30C768 !important;
+    background: #30c768 !important;
 }
 
 .viewAccess .bg-primary {
@@ -5417,18 +5284,18 @@ a.ui-button:active,
 }
 
 .viewAccess .tbleDiv {
-    border: 1px solid #D1CACA;
+    border: 1px solid #d1caca;
     border-radius: 4px;
 }
 
 .viewAccess .tbleDiv thead tr:first-child th {
-    background: #DAE1F3;
+    background: #dae1f3;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 13px;
 }
 
-.toggleBtn input[type=checkbox] {
+.toggleBtn input[type="checkbox"] {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -5440,14 +5307,14 @@ a.ui-button:active,
     text-indent: -9999px;
     width: 50px;
     height: 24px;
-    background: #D4D4D4;
+    background: #d4d4d4;
     display: block;
     border-radius: 100px;
     position: relative;
 }
 
 .toggleBtn label:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 4px;
     left: 4px;
@@ -5458,15 +5325,15 @@ a.ui-button:active,
     transition: 0.3s;
 }
 
-.toggleBtn input:checked+label {
-    background: rgba(4, 71, 131, .34);
+.toggleBtn input:checked + label {
+    background: rgba(4, 71, 131, 0.34);
 }
 
-.toggleBtn input:checked+label:after {
+.toggleBtn input:checked + label:after {
     background: #044783;
 }
 
-.toggleBtn input:checked+label:after {
+.toggleBtn input:checked + label:after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
 }
@@ -5475,7 +5342,6 @@ a.ui-button:active,
     font-size: 12px;
     font-weight: 500;
 }
-
 
 .chapterDetail {
     border-radius: 6px;
@@ -5490,7 +5356,7 @@ a.ui-button:active,
     font-size: 13px;
     border: 0;
     border-bottom: 2px solid transparent;
-    color: #C4C1BF;
+    color: #c4c1bf;
     font-weight: 500;
 }
 
@@ -5517,7 +5383,7 @@ a.ui-button:active,
 
 .chapterNme span {
     display: block;
-    color: #6D6D78;
+    color: #6d6d78;
     font-size: 12px;
 }
 
@@ -5545,13 +5411,13 @@ a.ui-button:active,
     margin: -10px;
 }
 
-.docxList>li {
+.docxList > li {
     width: 33.33%;
     padding: 10px;
 }
 
 .docxTxt {
-    background: #FAFAFC 0% 0% no-repeat padding-box;
+    background: #fafafc 0% 0% no-repeat padding-box;
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -5572,10 +5438,15 @@ a.ui-button:active,
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
 
     pointer-events: none;
-
 }
 
 .fileName {
@@ -5596,14 +5467,14 @@ a.ui-button:active,
     margin: -6px;
 }
 
-.ScheduleList>li {
+.ScheduleList > li {
     width: 33.33%;
     padding: 6px;
 }
 
 .schedulContent {
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
@@ -5645,7 +5516,7 @@ a.ui-button:active,
 
 .labelTxts {
     font-size: 12px;
-    background: #F3CA8C;
+    background: #f3ca8c;
     color: #000;
     padding: 2px 13px;
     border-radius: 3px;
@@ -5672,7 +5543,7 @@ a.ui-button:active,
 }
 
 .pageTab .tabLink.active {
-    background: #00BE55;
+    background: #00be55;
 }
 
 .homeBanner {
@@ -5727,7 +5598,7 @@ a.ui-button:active,
     background: #b5e7cc;
     font-size: 0;
     border-radius: 100px;
-    transition: .3s width;
+    transition: 0.3s width;
     margin: auto;
 }
 
@@ -5747,18 +5618,17 @@ a.ui-button:active,
     color: #989898;
     margin-left: 8px;
     font-size: 12px;
-
 }
 
 .contentView h6 b {
     color: #000;
 }
 
-.docxList .digitalBox figure>img {
+.docxList .digitalBox figure > img {
     height: 130px;
 }
 
-.upcomingList>li {
+.upcomingList > li {
     margin-bottom: 20px;
 }
 
@@ -5778,7 +5648,7 @@ a.ui-button:active,
 
 .upcomingList .upcomingtxt p {
     font-size: 12px;
-    color: #C4C1BF;
+    color: #c4c1bf;
     margin: 0;
 }
 
@@ -5789,7 +5659,6 @@ a.ui-button:active,
 .upcomingList .upcomingtxt h3 {
     font-size: 14px;
     font-weight: 600;
-
 }
 
 .upcomingList .upcomingtxt span {
@@ -5804,12 +5673,11 @@ a.ui-button:active,
 
 .timerleft {
     font-size: 12px;
-    color: #D10000;
+    color: #d10000;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 5px;
-
 }
 
 .upcomingList .upcomingContent {
@@ -5822,7 +5690,7 @@ a.ui-button:active,
     align-items: center;
 }
 
-.learnerUl>li img {
+.learnerUl > li img {
     width: 25px;
     max-width: 25px;
     height: 25px;
@@ -5831,12 +5699,12 @@ a.ui-button:active,
     border: 1px solid #fff;
 }
 
-.learnerUl>li span {
+.learnerUl > li span {
     width: 25px;
     max-width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #FFBE40;
+    background-color: #ffbe40;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5858,23 +5726,21 @@ a.ui-button:active,
 }
 
 .upcomingList .totalLearner b {
-    color: #30C768;
+    color: #30c768;
     font-weight: 500;
     font-size: 12px;
 }
 
-.learnerUl>li:nth-child(2) img,
-.learnerUl>li:nth-child(3) img {
+.learnerUl > li:nth-child(2) img,
+.learnerUl > li:nth-child(3) img {
     margin-left: -10px;
 }
 
 .learnermain {
     display: flex;
-
 }
 
-
-.pastUl>li .upcomingImg img {
+.pastUl > li .upcomingImg img {
     width: 180px;
     height: 185px;
     max-width: 180px;
@@ -5882,7 +5748,7 @@ a.ui-button:active,
 }
 
 .ongoingBx {
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     border-radius: 11px;
     margin-bottom: 16px;
     width: calc(33.33% - 8px);
@@ -5894,7 +5760,7 @@ a.ui-button:active,
     border-radius: 10px;
 }
 
-.ongoingimg>img {
+.ongoingimg > img {
     width: 100%;
     height: 155px;
     max-width: 100%;
@@ -5904,12 +5770,10 @@ a.ui-button:active,
 
 .ongoingimg figure {
     position: relative;
-
-
 }
 
 .ongoingimg figure::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     background-color: #0000003d;
@@ -5938,7 +5802,6 @@ a.ui-button:active,
     align-items: center;
     color: #fff;
     font-size: 13px;
-
 }
 
 .ongoingTxt {
@@ -5947,7 +5810,7 @@ a.ui-button:active,
 
 .profileClasses strong {
     font-size: 13px;
-    color: #98989A;
+    color: #98989a;
     font-weight: 500;
 }
 
@@ -5962,7 +5825,6 @@ a.ui-button:active,
     height: 30px;
     border-radius: 100px;
     object-fit: cover;
-
 }
 
 .ongoingTxt h3 {
@@ -5972,7 +5834,7 @@ a.ui-button:active,
 
 .ongoingTxt .progress {
     height: 8px;
-    background-color: #EDEDED;
+    background-color: #ededed;
 }
 
 .ongoingTxt .progress-bar {
@@ -6003,10 +5865,9 @@ a.ui-button:active,
 }
 
 .exploreBox {
-    background-color: #EBE8F9;
+    background-color: #ebe8f9;
     border-radius: 6px;
     padding: 15px;
-
 }
 
 .exploreBox figure img {
@@ -6019,37 +5880,34 @@ a.ui-button:active,
 }
 
 .exploreBox strong b {
-    color: #00BE55;
+    color: #00be55;
     font-size: 12px;
     margin-left: 5px;
     font-weight: 600;
-
 }
 
 .exploreBox strong {
     font-size: 10px;
     font-weight: 600;
-    color: #ADABAB;
+    color: #adabab;
     padding: 10px 0;
     display: block;
-
 }
 
 .boxorglight {
-    background-color: #FCF4E9;
+    background-color: #fcf4e9;
 }
 
 .boxgrnlight {
-    background-color: #EFFAFC;
+    background-color: #effafc;
 }
 
 .boxpinklight {
-    background-color: #FAECEB;
+    background-color: #faeceb;
 }
 
-
 .boxgrylight {
-    background-color: #E1E6E9;
+    background-color: #e1e6e9;
 }
 
 .btn-explore {
@@ -6060,13 +5918,13 @@ a.ui-button:active,
     gap: 8px;
     font-weight: 600;
     width: fit-content;
-    color: #0B59CF !important;
+    color: #0b59cf !important;
 }
 
 .exploreBox p {
     font-size: 14px;
     font-weight: 500;
-    color: #ADABAB;
+    color: #adabab;
     margin: 10px 0;
 }
 
@@ -6077,10 +5935,9 @@ a.ui-button:active,
 }
 
 .headingList p {
-    color: #B0B1B7;
+    color: #b0b1b7;
     font-size: 12px;
     margin: 0;
-
 }
 
 .languageBox {
@@ -6094,7 +5951,6 @@ a.ui-button:active,
     position: absolute;
     right: 0;
     top: 0;
-
 }
 
 .cornerImg {
@@ -6105,20 +5961,18 @@ a.ui-button:active,
 .languageBox h6 {
     font-size: 14px;
     font-weight: 600;
-
 }
 
 .languageBox span {
     font-size: 13px;
     font-weight: 600;
-    color: #00BE55;
+    color: #00be55;
     display: block;
     padding-bottom: 6px;
-
 }
 
 .languageBox span b {
-    color: #ADABAB;
+    color: #adabab;
     font-size: 12px;
     font-weight: 500;
     display: inline-block;
@@ -6156,14 +6010,13 @@ a.ui-button:active,
     align-items: center;
     justify-content: center;
     font-weight: 600;
-
 }
 
 .classTabs .nav-link {
-    border: 1px solid #DEE3E6;
+    border: 1px solid #dee3e6;
     padding: 6px 12px 6px 6px;
     border-radius: 30px;
-    background-color: #DEE3E6;
+    background-color: #dee3e6;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -6173,48 +6026,44 @@ a.ui-button:active,
 }
 
 .classTabs .nav-link.active {
-    background-color: #00BE55;
+    background-color: #00be55;
     color: #fff;
     font-weight: 300;
-    border: 1px solid #00BE55;
-
+    border: 1px solid #00be55;
 }
 
 .classTabs .nav-link.active span {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .calenderbtn {
-    background-color: #DCE9FE;
-    border: 1.5px solid #1061D2 !important;
+    background-color: #dce9fe;
+    border: 1.5px solid #1061d2 !important;
     padding: 6px 10px;
     border: 0;
-    color: #1061D2;
+    color: #1061d2;
     font-size: 12px;
     display: flex;
     align-items: center;
     font-weight: 500;
     border-radius: 4px;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .dailypHeader span {
     color: #000;
     font-size: 14px;
     font-weight: 600;
-
 }
 
 .dailypHeader b {
-    color: #ADABAB;
+    color: #adabab;
     font-weight: 400;
     font-size: 12px;
-
 }
 
 .dailyPlanner .tbleDiv tr th span {
     color: #000;
-
 }
 
 .dailyPlanner .tbleDiv tr th span b {
@@ -6231,7 +6080,7 @@ a.ui-button:active,
 
 .shiftBox strong b i {
     font-style: normal;
-    color: #00BE55;
+    color: #00be55;
     font-weight: 600;
 }
 
@@ -6248,25 +6097,23 @@ a.ui-button:active,
     padding: 10px;
     min-height: 65px;
     border-radius: 4px;
-    background-color: #CDE4F4;
+    background-color: #cde4f4;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-
 }
 
 .shiftBox::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0px;
     height: calc(100% - 2px);
     width: 3px;
-    background-color: #0068B5;
+    background-color: #0068b5;
     border-radius: 10px;
     margin: 0px;
-
 }
 
 .filterButtonUl {
@@ -6275,12 +6122,12 @@ a.ui-button:active,
     margin: -6px;
 }
 
-.filterButtonUl>li {
+.filterButtonUl > li {
     padding: 6px;
 }
 
 .filterbutton {
-    background: #DEE3E6;
+    background: #dee3e6;
     border-radius: 8px;
     padding: 8px 15px;
     border: none;
@@ -6288,20 +6135,20 @@ a.ui-button:active,
 }
 
 .filterbutton.active {
-    background: #00BE55;
+    background: #00be55;
     color: #fff;
 }
 
 .lightOrange {
-    background-color: #F2D796;
+    background-color: #f2d796;
 }
 
 .lightgreen {
-    background-color: #C1F2D0;
+    background-color: #c1f2d0;
 }
 
 .lightpink {
-    background-color: #FCE3F5;
+    background-color: #fce3f5;
 }
 
 .lightBlue {
@@ -6309,40 +6156,35 @@ a.ui-button:active,
 }
 
 .lightred {
-    background-color: #F2CDC1;
+    background-color: #f2cdc1;
 }
 
 .shiftBox.lightred::after {
-    background-color: #F1754D;
-
+    background-color: #f1754d;
 }
 
 .shiftBox.lightBlue::after {
-    background-color: #7C91A7;
-
+    background-color: #7c91a7;
 }
 
 .shiftBox.lightpink::after {
-    background-color: #E040B3;
-
+    background-color: #e040b3;
 }
 
 .shiftBox.lightOrange::after {
-    background-color: #A58334;
-
+    background-color: #a58334;
 }
 
 .shiftBox.lightgreen::after {
-    background-color: #59AC72;
-
+    background-color: #59ac72;
 }
 
 .completedTask .shiftBox {
-    background: #F2F2F2;
+    background: #f2f2f2;
 }
 
 .completedTask .shiftBox::after {
-    background: #AFB3B6;
+    background: #afb3b6;
 }
 
 .tbleDiv {
@@ -6373,7 +6215,7 @@ a.ui-button:active,
 
 .chapterBox {
     padding: 10px;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     border-radius: 6px;
     margin-bottom: 10px;
 }
@@ -6388,12 +6230,12 @@ a.ui-button:active,
     justify-content: center;
     font-size: 14px;
     font-weight: 600;
-    background: #EBEEF6;
+    background: #ebeef6;
 }
 
 .chapterName span {
     font-size: 12px;
-    color: #6E737F;
+    color: #6e737f;
 }
 
 .chapterName span b {
@@ -6401,13 +6243,13 @@ a.ui-button:active,
 }
 
 .chapterVideos {
-    background: #F2F5F9;
+    background: #f2f5f9;
     padding: 14px;
     border-radius: 6px;
 }
 
 .chapterVideos h4 b {
-    color: #ADABAB;
+    color: #adabab;
     font-size: 12px;
     font-weight: 600;
 }
@@ -6418,13 +6260,13 @@ a.ui-button:active,
     margin: -7px;
 }
 
-.chapterList>li {
+.chapterList > li {
     width: 20%;
     padding: 7px;
 }
 
 .chapterBtn {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -6436,7 +6278,7 @@ a.ui-button:active,
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F2F5F9;
+    background-color: #f2f5f9;
 }
 
 .chapterBtn figure img {
@@ -6502,11 +6344,10 @@ button.plybtn img {
     background-image: url(../images/whiteClose.svg);
     background-repeat: no-repeat;
     background-size: 10px;
-
 }
 
 .monthHeader {
-    background-color: #E8ECF1;
+    background-color: #e8ecf1;
     border-radius: 4px;
     padding: 20px 15px;
     display: flex;
@@ -6524,7 +6365,6 @@ button.plybtn img {
     font-weight: 600;
     display: block;
     font-size: 14px;
-
 }
 
 .monthsUl {
@@ -6532,17 +6372,16 @@ button.plybtn img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
-.monthsUl>li {
+.monthsUl > li {
     width: 25%;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
 }
 
-.monthsUl>li a {
+.monthsUl > li a {
     color: #000;
     font-weight: 500;
     width: 50px;
@@ -6554,15 +6393,14 @@ button.plybtn img {
     align-items: center;
 }
 
-.monthsUl>li a.active {
-    background-color: #00BE55;
+.monthsUl > li a.active {
+    background-color: #00be55;
     color: #fff;
 }
 
 #changeMonth .modal-body {
-    background-color: #F2F5F9 !important;
+    background-color: #f2f5f9 !important;
     border-radius: 8px;
-
 }
 
 .dashboardHead .alertsSec {
@@ -6570,20 +6408,19 @@ button.plybtn img {
 }
 
 .currentBg {
-    background-color: #F1F5FD !important;
+    background-color: #f1f5fd !important;
 }
 
 #profile {
     --bs-modal-width: 850px;
 }
 
-.profileUpload figure>img {
+.profileUpload figure > img {
     width: 160px;
     height: 140px;
     object-fit: cover;
     border-radius: 10px;
     margin: auto;
-
 }
 
 .contentprf {
@@ -6600,11 +6437,10 @@ button.plybtn img {
 
 .profileUpload figure {
     width: 160px;
-
 }
 
 .profileUpload figure:hover::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -6613,8 +6449,7 @@ button.plybtn img {
     border-radius: 10px;
     z-index: 1;
     background-color: #00000050;
-    transition: .3s;
-
+    transition: 0.3s;
 }
 
 .profileUpload {
@@ -6626,14 +6461,12 @@ button.plybtn img {
 
 .profileUpload figure:hover .contentprf {
     display: block;
-
 }
 
 .profileSidebar {
-    background-color: #F1F2F5;
+    background-color: #f1f2f5;
     width: 25%;
     border-radius: 4px 0 0 4px;
-
 }
 
 .profileTabs {
@@ -6661,7 +6494,6 @@ button.plybtn img {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-
 }
 
 .profileRight .tab-pane .formPanel {
@@ -6674,8 +6506,8 @@ button.plybtn img {
 
 .profileRight .formPanel .form-control,
 .profileRight .formPanel .form-select {
-    background-color: #F9FAFC;
-    border: 1px solid #E5DFDF;
+    background-color: #f9fafc;
+    border: 1px solid #e5dfdf;
     font-size: 12px;
 }
 
@@ -6700,7 +6532,6 @@ button.plybtn img {
     right: 12px;
     top: 12px;
     background-size: 10px;
-
 }
 
 .profileRight .formPanel input {
@@ -6727,7 +6558,6 @@ button.plybtn img {
 .loginTabs {
     display: flex;
     position: relative;
-
 }
 
 .loginTabs .nav-item {
@@ -6746,38 +6576,36 @@ button.plybtn img {
     border: 0;
     position: relative;
     color: #044783;
-
 }
 
 .loginTabs .nav-item .nav-link.active::after {
-    content: '';
+    content: "";
     position: absolute;
-    background: transparent linear-gradient(90deg, #044783 0%, #00C056 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #044783 0%, #00c056 100%) 0%
+        0% no-repeat padding-box;
     height: 4px;
     width: 100%;
     border-radius: 30px;
     left: 0;
     bottom: -2px;
     z-index: 10000;
-
 }
 
 .loginTabs .nav-item .nav-link {
     color: #044783;
     font-weight: 600;
     font-size: 12px;
-    color: #ADABAB;
+    color: #adabab;
 }
 
 .loginTabs::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #e9e8e8;
     height: 4px;
     width: 100%;
     bottom: -2px;
     border-radius: 30px;
-
 }
 
 .loginTabs .nav-item .nav-link.active {
@@ -6808,7 +6636,7 @@ button.plybtn img {
 }
 
 .educationTxt h3 b {
-    color: #00BE55;
+    color: #00be55;
 }
 
 .educationTxt p {
@@ -6845,7 +6673,7 @@ button.plybtn img {
 }
 
 .mainCourseTab {
-    background: #F2F5FE;
+    background: #f2f5fe;
     padding: 8px;
     border-radius: 8px;
     margin-bottom: 25px;
@@ -6860,8 +6688,8 @@ button.plybtn img {
 }
 
 .mainCourseTab .coursesTabs .nav-item .nav-link {
-    background: #FFFFFF;
-    border: 1px solid #D5DAE8;
+    background: #ffffff;
+    border: 1px solid #d5dae8;
     border-radius: 7px;
     font-weight: normal;
     font-size: 13px;
@@ -6896,8 +6724,8 @@ button.plybtn img {
 
 .mainCourseTab .coursesTabs .nav-item .nav-link:hover,
 .mainCourseTab .coursesTabs .nav-item .nav-link.active {
-    background: #00BE55;
-    border-color: #00BE55;
+    background: #00be55;
+    border-color: #00be55;
     color: #fff;
 }
 
@@ -6968,9 +6796,8 @@ button.plybtn img {
     line-height: normal;
 }
 
-
 .chapterSide .tableSearch .form-control {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     border-radius: 5px;
     border: none;
     height: 43px;
@@ -6989,7 +6816,7 @@ button.plybtn img {
     margin: 0;
 }
 
-.chapterSide .chapterList>li {
+.chapterSide .chapterList > li {
     display: block;
     padding: 3px 3px 3px 0;
     width: 100%;
@@ -7008,7 +6835,7 @@ button.plybtn img {
 }
 
 .chapterSide .chapterBtn.selected {
-    border: 1px solid #D1CACA;
+    border: 1px solid #d1caca;
 }
 
 .chapterSide .chapterBtn figure,
@@ -7040,13 +6867,13 @@ button.plybtn img {
     padding-right: 5px;
 }
 
-.plannedCall>li figure img {
+.plannedCall > li figure img {
     border-radius: 50%;
 }
 
 .badge {
-    color: #9790EB !important;
-    background-color: #EAE8FB;
+    color: #9790eb !important;
+    background-color: #eae8fb;
     border-radius: 30px;
     padding: 7px 10px;
     display: block;
@@ -7054,17 +6881,16 @@ button.plybtn img {
     width: 110px;
     text-align: center;
     font-size: 12px !important;
-
 }
 
 .badge.orange {
-    background-color: #F5E9C9;
-    color: #FFB200 !important;
+    background-color: #f5e9c9;
+    color: #ffb200 !important;
 }
 
 .badge.green {
-    background-color: #C1F2D0;
-    color: #59AC72 !important;
+    background-color: #c1f2d0;
+    color: #59ac72 !important;
     /* width: 70px;
     min-width: 70px; */
 }
@@ -7074,19 +6900,19 @@ button.plybtn img {
     height: 50px;
 }
 
-.plannedCall>li {
+.plannedCall > li {
     padding: 20px 10px 10px;
     position: relative;
     margin-bottom: 20px;
 }
 
-.plannedCall>li .plannedMain {
+.plannedCall > li .plannedMain {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.plannedCall>li .badge {
+.plannedCall > li .badge {
     position: absolute;
     top: -15px;
     left: 6px;
@@ -7106,7 +6932,6 @@ button.plybtn img {
     font-weight: 600;
     font-size: 16px;
     margin: 0;
-
 }
 
 .cartHeading a {
@@ -7123,7 +6948,7 @@ button.plybtn img {
 }
 
 .shoppingTable .tbleDiv .table {
-    border: 1px solid #EBE5E5;
+    border: 1px solid #ebe5e5;
     border-radius: 4px;
 }
 
@@ -7158,7 +6983,6 @@ button.plybtn img {
 
 .shoppingTable .coursesName h3 {
     color: #000;
-
 }
 
 .shoppingTable .tbleDiv tr th {
@@ -7166,7 +6990,7 @@ button.plybtn img {
 }
 
 .textGreen {
-    color: #00BE55;
+    color: #00be55;
     font-weight: 700;
     font-size: 16px;
 }
@@ -7190,7 +7014,7 @@ button.plybtn img {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 120px;
-    background-color: #C8F1DA;
+    background-color: #c8f1da;
     padding: 10px;
     border-radius: 6px;
 }
@@ -7198,11 +7022,10 @@ button.plybtn img {
 .discountBx span {
     font-weight: 600;
     font-size: 13px;
-
 }
 
 .discountBx span b {
-    color: #00BE55;
+    color: #00be55;
     font-size: 20px;
     font-weight: 600;
 }
@@ -7214,7 +7037,6 @@ button.plybtn img {
     background-color: transparent;
     font-size: 12px;
     padding: 2px 1px;
-
 }
 
 .discountBx p {
@@ -7225,9 +7047,8 @@ button.plybtn img {
     margin: 0;
 }
 
-
 .shoppingAddress {
-    border: 1px solid #EBE5E5;
+    border: 1px solid #ebe5e5;
     padding: 12px;
     border-radius: 6px;
 }
@@ -7244,7 +7065,7 @@ button.plybtn img {
 }
 
 .cartTotal {
-    background-color: #FFD28D;
+    background-color: #ffd28d;
     border-radius: 16px;
     padding: 22px 10px 10px 10px;
 }
@@ -7255,7 +7076,6 @@ button.plybtn img {
     font-weight: 500;
     background: transparent;
     padding: 5px 10px;
-
 }
 
 .Checkout {
@@ -7265,24 +7085,23 @@ button.plybtn img {
 
 .changeaddBtn {
     background-color: transparent;
-    border: 1px solid #00BE55;
+    border: 1px solid #00be55;
     border-radius: 4px;
     padding: 10px 20px;
-    color: #00BE55;
+    color: #00be55;
     font-weight: 500;
     font-size: 12px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .changeaddBtn:hover {
     background-color: #fff;
-
 }
 
 .changeAddress {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     padding: 20px 15px;
-    border: 1px solid #EBE5E5;
+    border: 1px solid #ebe5e5;
     border-radius: 6px;
     margin-bottom: 15px;
 }
@@ -7301,9 +7120,6 @@ button.plybtn img {
 .changeAddress p {
     font-size: 12px;
 }
-
-
-
 
 .subscriptionBanner {
     background: url(../images/pricing-banner.jpg);
@@ -7333,12 +7149,12 @@ button.plybtn img {
     justify-content: center;
     max-width: 330px;
     margin: auto;
-    background: #00BE55;
+    background: #00be55;
     padding: 4px;
     border-radius: 100px;
 }
 
-.subscriptionTab ul>li {
+.subscriptionTab ul > li {
     width: 50%;
 }
 
@@ -7364,7 +7180,7 @@ button.plybtn img {
 }
 
 .tbButton.active {
-    background: #FFFFFF;
+    background: #ffffff;
     color: #000;
 }
 
@@ -7401,7 +7217,7 @@ button.plybtn img {
 .freetext p {
     font-size: 13px;
     margin-bottom: 0;
-    color: #ADABAB;
+    color: #adabab;
 }
 
 .addAddress .modal-dialog {
@@ -7424,10 +7240,10 @@ button.plybtn img {
 }
 
 .addAddress .formPanel .form-group input[readonly] {
-    background-color: #EFF3F6;
+    background-color: #eff3f6;
 }
 
-.teacherOnline>li span {
+.teacherOnline > li span {
     font-size: 11px;
     color: #fff;
     position: absolute;
@@ -7436,7 +7252,7 @@ button.plybtn img {
     z-index: 1;
 }
 
-.teacherOnline>li figure a {
+.teacherOnline > li figure a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7444,8 +7260,8 @@ button.plybtn img {
     z-index: 1;
 }
 
-.teacherOnline>li figure::after {
-    content: '';
+.teacherOnline > li figure::after {
+    content: "";
     position: absolute;
     top: 0;
     background-color: #0000003d;
@@ -7455,25 +7271,25 @@ button.plybtn img {
     border-radius: 10px;
 }
 
-.teacherOnline>li figure img {
+.teacherOnline > li figure img {
     border-radius: 10px;
 }
 
-.teacherOnline>li .peragraph {
+.teacherOnline > li .peragraph {
     color: #707070;
 }
 
-.teacherOnline>li h3 {
+.teacherOnline > li h3 {
     font-size: 13px;
     font-weight: 600;
 }
 
-.teacherOnline>li p {
+.teacherOnline > li p {
     display: flex;
     justify-content: space-between;
 }
 
-#pastTab .teacherOnline>li {
+#pastTab .teacherOnline > li {
     width: 25%;
 }
 
@@ -7481,7 +7297,6 @@ button.plybtn img {
     font-weight: 500;
     min-width: 85px;
     font-size: 12px;
-
 }
 
 .teacherOnline .totalLearner {
@@ -7490,12 +7305,12 @@ button.plybtn img {
     align-items: center;
 }
 
-.teacherOnline .learnerUl>li b {
+.teacherOnline .learnerUl > li b {
     width: 25px;
     max-width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #FFBE40;
+    background-color: #ffbe40;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7506,17 +7321,14 @@ button.plybtn img {
 }
 
 .onlineTabs {
-    border-bottom: 2px solid #E9E9E9 !important;
+    border-bottom: 2px solid #e9e9e9 !important;
     margin-bottom: 3px;
 }
-
 
 .studentLearner h3 b {
     color: #044783;
     font-weight: bold;
     font-size: 20px;
-
-
 }
 
 .studentLearner h3 {
@@ -7525,7 +7337,6 @@ button.plybtn img {
     align-items: center;
     gap: 10px;
     font-weight: 600;
-
 }
 
 .studentLearner .searchBox input {
@@ -7548,7 +7359,6 @@ button.plybtn img {
 .profileLerner {
     font-size: 13px;
     font-weight: 500;
-
 }
 
 .profileLerner img {
@@ -7576,7 +7386,6 @@ button.plybtn img {
     right: 12px;
     padding: 2px;
     border-radius: 50%;
-
 }
 
 .schoolDropdown .dropdown-menu {
@@ -7600,7 +7409,7 @@ button.plybtn img {
 
 .materialStudy .classesBx {
     border: 0;
-    background-color: #FAFAFC;
+    background-color: #fafafc;
 }
 
 .shedularRight {
@@ -7611,9 +7420,8 @@ button.plybtn img {
 }
 
 .shedularRight span {
-    color: #ADABAB;
+    color: #adabab;
     font-size: 12px;
-
 }
 
 .shedularRight select {
@@ -7622,23 +7430,20 @@ button.plybtn img {
     height: 36px;
     font-size: 12px;
     font-weight: 500;
-    border: 1.3px solid #BBBABA;
+    border: 1.3px solid #bbbaba;
 }
 
 .viewallBtn {
-    background-color: #00BE55 !important;
+    background-color: #00be55 !important;
     color: #fff !important;
     padding: 7px 14px;
     font-size: 13px;
 }
 
-
 /*  */
 
-
-
 .ViewBox {
-    background-color: #EAF9F6;
+    background-color: #eaf9f6;
     padding: 20px 10px;
     border-radius: 10px;
     text-align: center;
@@ -7683,7 +7488,7 @@ button.plybtn img {
     margin-top: 10;
 }
 
-.mySubjects>li {
+.mySubjects > li {
     width: 20%;
     padding: 4px;
 }
@@ -7695,7 +7500,7 @@ button.plybtn img {
 }
 
 .watchingBox {
-    border: 1px solid #D6C6C6;
+    border: 1px solid #d6c6c6;
     border-radius: 6px;
     padding: 0px 10px;
 }
@@ -7712,7 +7517,7 @@ button.plybtn img {
 }
 
 .watchingBox b span {
-    color: #C6C3C3;
+    color: #c6c3c3;
 }
 
 .watchingBox strong {
@@ -7729,29 +7534,27 @@ button.plybtn img {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
 }
 
 .watchingBox p {
     margin-bottom: 8px;
     font-size: 12px;
-    color: #ADABAB;
+    color: #adabab;
 }
 
 .watchingBox .progress-bar,
 .progressTbl .progress-bar {
-    background-color: #3DBDAA;
+    background-color: #3dbdaa;
 }
 
 .watchingBox .progress,
 .progressTbl {
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     height: 7px;
-
 }
 
 .mycoursesTbl h2 span {
-    background-color: #FFBE03;
+    background-color: #ffbe03;
     color: #000;
     font-size: 12px;
     padding: 4px;
@@ -7761,7 +7564,6 @@ button.plybtn img {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .mycoursesTbl .myCourseLft h3 {
@@ -7777,11 +7579,10 @@ button.plybtn img {
 
 .mycoursesTbl .myCourseLft figure {
     width: 40px;
-
 }
 
 .mycoursesTbl .myCourseLft p {
-    color: #ADABAB;
+    color: #adabab;
     margin: 0;
 }
 
@@ -7790,37 +7591,36 @@ button.plybtn img {
 }
 
 .lessonCom b {
-    color: #ADABAB;
+    color: #adabab;
     font-weight: 500;
 }
 
 .mycoursesTbl table tr th {
-    color: #ADABAB !important;
+    color: #adabab !important;
 }
 
 .mycoursesTbl table tr td {
     color: #000 !important;
-
 }
 
 .scienceBg {
-    background-color: #FFF8E6;
+    background-color: #fff8e6;
 }
 
 .mathematicsBg {
-    background-color: #F4F4FE;
+    background-color: #f4f4fe;
 }
 
 .computerBg {
-    background-color: #FEF2F1;
+    background-color: #fef2f1;
 }
 
 .hindiBg {
-    background-color: #DEEAF8;
+    background-color: #deeaf8;
 }
 
 .socialBg {
-    background-color: #FFE8F9;
+    background-color: #ffe8f9;
 }
 
 .hours {
@@ -7830,12 +7630,11 @@ button.plybtn img {
 .hours b {
     font-size: 10px;
     font-weight: 500;
-    color: #C6C3C3;
-
+    color: #c6c3c3;
 }
 
 .monthCal {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     border-radius: 4px;
     padding: 5px 10px;
     position: relative;
@@ -7853,7 +7652,7 @@ button.plybtn img {
     padding-bottom: 4px;
 }
 
-.dateUl>li span {
+.dateUl > li span {
     color: #000;
     font-weight: 600;
     font-size: 14px;
@@ -7862,48 +7661,44 @@ button.plybtn img {
     border-radius: 10px;
     padding: 10px 4px;
     display: inline-block;
-
 }
 
-.dateUl>li span.active {
-    background-color: #00BE55;
+.dateUl > li span.active {
+    background-color: #00be55;
     color: #fff;
 }
 
-.dateUl>li span.active b {
+.dateUl > li span.active b {
     color: #fff !important;
 }
 
-.dateUl>li span b {
+.dateUl > li span b {
     display: block;
     font-weight: 400;
     margin-top: 3px;
     font-size: 12px;
-    color: #98B4CD;
-
+    color: #98b4cd;
 }
 
-.subjectsUl>li strong {
-    color: #9D9CA0;
+.subjectsUl > li strong {
+    color: #9d9ca0;
     font-size: 13px;
     font-weight: 500;
-
 }
 
-.subjectsUl>li strong {
+.subjectsUl > li strong {
     position: relative;
     display: block;
 }
 
-.subjectsUl>li strong::after {
-    content: '';
+.subjectsUl > li strong::after {
+    content: "";
     position: absolute;
     left: 70px;
     top: 10px;
     width: calc(100% - 70px);
-    background-color: #DBDBDB;
+    background-color: #dbdbdb;
     height: 1px;
-
 }
 
 .subjectBox span {
@@ -7921,27 +7716,24 @@ button.plybtn img {
 .subjectBox figure {
     font-size: 12px;
     font-weight: 500;
-
 }
 
-.subjectBox figure>img {
+.subjectBox figure > img {
     margin-right: 10px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     object-fit: cover;
-
 }
 
 .subjectBox strong {
     color: #000 !important;
     font-size: 12px !important;
     font-weight: 500;
-
 }
 
 .star {
-    color: #F8B84E;
+    color: #f8b84e;
 }
 
 .subjectsUl {
@@ -7950,12 +7742,12 @@ button.plybtn img {
     padding-right: 5px;
 }
 
-.subjectsUl>li {
+.subjectsUl > li {
     margin-bottom: 10px;
 }
 
 .subjectBox {
-    background-color: #CDE4F4;
+    background-color: #cde4f4;
     padding: 12px 10px 10px;
     border-radius: 4px;
     margin-left: 70px;
@@ -7963,9 +7755,9 @@ button.plybtn img {
 }
 
 .subjectBox::after {
-    content: '';
+    content: "";
     position: absolute;
-    background-color: #0068B5;
+    background-color: #0068b5;
     height: calc(100% - 6px);
     top: 3px;
     left: 0px;
@@ -7974,15 +7766,15 @@ button.plybtn img {
 }
 
 .englishBg {
-    background-color: #F2D796;
+    background-color: #f2d796;
 }
 
 .englishBg::after {
-    background-color: #A58334;
+    background-color: #a58334;
 }
 
 .socialStd {
-    background-color: #C1F2D0;
+    background-color: #c1f2d0;
 }
 
 .associatedTbl {
@@ -7998,15 +7790,12 @@ button.plybtn img {
 }
 
 .associatedTbl table tr th {
-    color: #ADABAB !important;
+    color: #adabab !important;
     font-weight: 500 !important;
-
 }
 
-
 .associatedTbl table tr td {
-    background-color: #F5F6FB;
-
+    background-color: #f5f6fb;
 }
 
 .progressTbl {
@@ -8016,7 +7805,7 @@ button.plybtn img {
 .joinclassBox {
     padding: 15px 14px;
     border-radius: 6px;
-    background-color: #EFF4FB;
+    background-color: #eff4fb;
 }
 
 .joinTxt h3 {
@@ -8026,7 +7815,6 @@ button.plybtn img {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
 }
 
 .joinTxt figure {
@@ -8038,8 +7826,6 @@ button.plybtn img {
     height: 20px !important;
     border-radius: 50% !important;
     margin-right: 4px;
-
-
 }
 
 .joinclassBox figure img {
@@ -8049,15 +7835,12 @@ button.plybtn img {
     border-radius: 4px;
 }
 
-
 .joinclassBox {
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
 }
-
 
 .joinclassBox p {
     font-size: 12px;
-
 }
 
 .joinclassBox ul {
@@ -8065,18 +7848,18 @@ button.plybtn img {
     flex-wrap: wrap;
 }
 
-.joinclassBox ul>li {
+.joinclassBox ul > li {
     width: 50%;
     margin-bottom: 10px;
 }
 
-.joinclassBox ul>li strong {
+.joinclassBox ul > li strong {
     font-size: 12px;
     font-weight: 400;
-    color: #ADABAB;
+    color: #adabab;
 }
 
-.joinclassBox ul>li strong b {
+.joinclassBox ul > li strong b {
     font-weight: 600;
     display: block;
     color: #000;
@@ -8095,16 +7878,15 @@ button.plybtn img {
 .progressCount p {
     color: #fff;
     font-weight: 500;
-
 }
 
 .progressCount b {
-    color: #98B4CD;
+    color: #98b4cd;
     font-weight: 500;
 }
 
 .progressCount span {
-    color: #98B4CD;
+    color: #98b4cd;
     font-weight: 400;
     font-size: 12px;
 }
@@ -8116,20 +7898,19 @@ button.plybtn img {
 }
 
 .progressCount::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 2px;
-    background-color: #00BE55;
+    background-color: #00be55;
     width: 4px;
     height: 36px;
     border-radius: 10px;
 }
 
 .borderOrg::after {
-    background-color: #FE8949;
+    background-color: #fe8949;
 }
-
 
 /*Student Panel Css*/
 .studentHead {
@@ -8139,31 +7920,32 @@ button.plybtn img {
     width: 100%;
     z-index: 999;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
-    background: transparent linear-gradient(255deg, #00438C 0%, #0853B1 49%, #1265DA 100%) 0% 0% no-repeat padding-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent
+        linear-gradient(255deg, #00438c 0%, #0853b1 49%, #1265da 100%) 0% 0%
+        no-repeat padding-box;
 }
 
 .navList {
     display: flex;
     flex-wrap: wrap;
-
 }
 
-.navList>li {
+.navList > li {
     margin: 0 15px;
 }
 
-.navList>li a {
+.navList > li a {
     font-size: 13px;
-    color: #A1CEF6;
+    color: #a1cef6;
     position: relative;
 }
 
-.navList>li a.active {
+.navList > li a.active {
     color: #fff;
 }
 
-.navList>li a.active:after {
+.navList > li a.active:after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -8174,12 +7956,14 @@ button.plybtn img {
 }
 
 .studentBanner {
-    background: transparent linear-gradient(255deg, #00438C 0%, #0853B1 49%, #1265DA 100%) 0% 0% no-repeat padding-box;
+    background: transparent
+        linear-gradient(255deg, #00438c 0%, #0853b1 49%, #1265da 100%) 0% 0%
+        no-repeat padding-box;
     padding: 100px 20px 30px;
 }
 
 .studentOverView {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 4px;
 }
@@ -8188,7 +7972,7 @@ button.plybtn img {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-    border: 1px solid rgba(152, 180, 205, .27);
+    border: 1px solid rgba(152, 180, 205, 0.27);
     padding: 10px;
     border-radius: 4px;
     max-width: 260px;
@@ -8200,7 +7984,6 @@ button.plybtn img {
     min-width: 40px;
     height: 40px;
 }
-
 
 .accountStart figure {
     margin: 0;
@@ -8216,7 +7999,7 @@ button.plybtn img {
 .accountStart p span {
     display: block;
     font-size: 12px;
-    color: #A1CEF6;
+    color: #a1cef6;
 }
 
 .studentinfoList {
@@ -8253,42 +8036,42 @@ button.plybtn img {
 }
 
 .studentImage h5 {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 14px;
     margin: 0;
 }
 
 .studentImage span {
     font-size: 13px;
-    color: #A1CEF6;
+    color: #a1cef6;
 }
 
-.studentinfoList>li {
+.studentinfoList > li {
     width: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(92, 140, 205, .27);
-    border-right: 1px solid rgba(152, 180, 205, .27);
+    border-bottom: 1px solid rgba(92, 140, 205, 0.27);
+    border-right: 1px solid rgba(152, 180, 205, 0.27);
     padding: 20px 20px;
 }
 
-.studentinfoList>li:nth-child(even) {
+.studentinfoList > li:nth-child(even) {
     border-right: 0;
 }
 
-.studentinfoList>li:nth-last-child(1),
-.studentinfoList>li:nth-last-child(2) {
+.studentinfoList > li:nth-last-child(1),
+.studentinfoList > li:nth-last-child(2) {
     border-bottom: 0;
 }
 
-.studentinfoList>li figure {
+.studentinfoList > li figure {
     width: 35px;
     min-width: 35px;
     height: 35px;
     margin: 0;
 }
 
-.studentinfoList>li p {
+.studentinfoList > li p {
     font-size: 13px;
     font-weight: 500;
     color: #fff;
@@ -8296,9 +8079,9 @@ button.plybtn img {
     margin: 0;
 }
 
-.studentinfoList>li p span {
+.studentinfoList > li p span {
     display: block;
-    color: #A1CEF6;
+    color: #a1cef6;
     font-size: 12px;
 }
 
@@ -8315,7 +8098,6 @@ button.plybtn img {
     height: 35px;
     object-fit: cover;
     border-radius: 50%;
-
 }
 
 .teacherTxt strong {
@@ -8323,7 +8105,7 @@ button.plybtn img {
     height: 40px;
     padding: 6px;
     background-color: #fff;
-    border: 1px solid #ADABAB;
+    border: 1px solid #adabab;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8338,11 +8120,10 @@ button.plybtn img {
     height: 30px;
     font-weight: 500;
     font-size: 14px;
-
 }
 
 .todayBadge {
-    background-color: #00BE55;
+    background-color: #00be55;
     color: #fff;
     font-weight: 400;
     border-radius: 30px;
@@ -8381,7 +8162,7 @@ button.plybtn img {
     padding-right: 4px;
 }
 
-.classesMain>span {
+.classesMain > span {
     color: #707070;
     font-weight: 600;
     font-size: 13px;
@@ -8405,7 +8186,7 @@ button.plybtn img {
 }
 
 .planInfo {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     padding: 20px 15px;
     border-radius: 4px;
 }
@@ -8418,13 +8199,12 @@ button.plybtn img {
 .planName figure img {
     background-color: #fff;
     border-radius: 50%;
-    border: 1px solid #00BE55;
+    border: 1px solid #00be55;
     padding: 10px;
     box-shadow: 0px 3px 6px #00000029;
     width: 47px;
     min-width: 47px;
     height: 47px;
-
 }
 
 .planName h3 {
@@ -8448,20 +8228,16 @@ button.plybtn img {
 
 .premiumTxt {
     text-align: end;
-
 }
 
 .premiumTxt strong {
     font-weight: 600;
     font-size: 14px;
-
-
 }
 
 .premiumTxt span {
     display: block;
     font-size: 12px;
-
 }
 
 .premiumTxt span b {
@@ -8472,19 +8248,19 @@ button.plybtn img {
     font-size: 15px;
 }
 
-.accessUl>li .accessTxt {
+.accessUl > li .accessTxt {
     display: flex;
     gap: 10px;
     font-size: 13px;
     font-weight: 400;
 }
 
-.accessUl>li {
+.accessUl > li {
     margin-bottom: 8px;
 }
 
 .accessDetails {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     padding: 15px;
     border-radius: 4px;
 }
@@ -8497,7 +8273,6 @@ button.plybtn img {
     border-radius: 100px;
     color: #fff;
     margin-left: 10px;
-
 }
 
 .planName p b {
@@ -8507,7 +8282,7 @@ button.plybtn img {
 }
 
 .countBx .planName {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     padding: 25px;
     border-radius: 4px;
 }
@@ -8518,10 +8293,9 @@ button.plybtn img {
 }
 
 #transactionTb .tbleDiv tr td {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     border: 0;
     padding: 20px 15px;
-
 }
 
 .paidBadge {
@@ -8529,7 +8303,7 @@ button.plybtn img {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 6px;
-    background-color: #CEEEE2;
+    background-color: #ceeee2;
 }
 
 .failedBadge {
@@ -8537,16 +8311,15 @@ button.plybtn img {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 6px;
-    background-color: #E5BCBF;
+    background-color: #e5bcbf;
 }
 
 #transactionTb .tbleDiv:last-child tr td {
     border-bottom: 10px solid #fff;
-
 }
 
 .badgeDay {
-    background-color: #F3CA8C;
+    background-color: #f3ca8c;
     color: #000 !important;
     padding: 4px 10px;
     border-radius: 4px;
@@ -8555,7 +8328,7 @@ button.plybtn img {
     font-size: 11px !important;
 }
 
-.danceChep .chapterBtn figure>img {
+.danceChep .chapterBtn figure > img {
     width: 100%;
     height: 130px;
 }
@@ -8564,13 +8337,12 @@ button.plybtn img {
     min-height: 130px;
 }
 
-
 .damceCourse .chapterSide .chapterList {
     max-height: 580px;
 }
 
 .blueTxt {
-    color: #00438C;
+    color: #00438c;
     font-size: 13px;
     padding: 4px 0px;
     font-weight: 500;
@@ -8581,12 +8353,10 @@ button.plybtn img {
 
 #scheduledOnline {
     --bs-modal-width: 450px;
-
 }
 
 .sliderDate {
     width: 100%;
-
 }
 
 .sliderDate .item span {
@@ -8616,10 +8386,9 @@ button.plybtn img {
 }
 
 .sliderDate .item.active span {
-    background-color: #00BE55;
+    background-color: #00be55;
     border-radius: 6px;
     color: #fff;
-
 }
 
 .nextIcon {
@@ -8644,26 +8413,23 @@ button.plybtn img {
     left: 30%;
 }
 
-
-
-
 /*TPG CSS*/
-.menuList>li a.submenuToggle {
+.menuList > li a.submenuToggle {
     padding-right: 40px;
     position: relative;
     border-radius: 6px;
 }
 
-.menuList.menuList>li a.submenuToggle[aria-expanded="true"] img {
+.menuList.menuList > li a.submenuToggle[aria-expanded="true"] img {
     filter: invert(1);
 }
 
-.menuList>li a.submenuToggle[aria-expanded="true"] {
-    background-color: #30C768;
+.menuList > li a.submenuToggle[aria-expanded="true"] {
+    background-color: #30c768;
     color: #fff;
 }
 
-.menuList>li a.submenuToggle:before {
+.menuList > li a.submenuToggle:before {
     content: "\F282";
     font-family: bootstrap-icons !important;
     position: absolute;
@@ -8674,14 +8440,14 @@ button.plybtn img {
     padding-left: 40px;
 }
 
-.submenuList>li>a {
+.submenuList > li > a {
     padding: 5px 0 5px 10px;
     background: none !important;
     color: #000;
     position: relative;
 }
 
-.submenuList>li>a:before {
+.submenuList > li > a:before {
     content: "\F309";
     position: absolute;
     top: 10px;
@@ -8691,15 +8457,15 @@ button.plybtn img {
     line-height: 10px;
 }
 
-.submenuList>li>a:hover,
-.submenuList>li>a.active {
+.submenuList > li > a:hover,
+.submenuList > li > a.active {
     background: none !important;
-    color: #00BE55;
+    color: #00be55;
 }
 
 .activeStatus {
     display: inline-block;
-    color: #00BE55;
+    color: #00be55;
     position: relative;
     padding-left: 12px;
 }
@@ -8714,12 +8480,12 @@ button.plybtn img {
     height: 5px;
     margin: auto;
     border-radius: 100px;
-    background-color: #00BE55;
+    background-color: #00be55;
 }
 
 .deactiveStatus {
     display: inline-block;
-    color: #FF0000;
+    color: #ff0000;
     position: relative;
     padding-left: 12px;
 }
@@ -8734,13 +8500,13 @@ button.plybtn img {
     height: 5px;
     margin: auto;
     border-radius: 100px;
-    background-color: #FF0000;
+    background-color: #ff0000;
 }
 
 .assignedtxt {
     border-radius: 4px;
-    background: #CCF2DD;
-    color: #2C896C;
+    background: #ccf2dd;
+    color: #2c896c;
     padding: 7px 13px;
     width: 98px;
     display: flex;
@@ -8752,8 +8518,8 @@ button.plybtn img {
 
 .unassignedtxt {
     border-radius: 4px;
-    background: #FCE7F5;
-    color: #864A63;
+    background: #fce7f5;
+    color: #864a63;
     padding: 7px 13px;
     width: 115px;
     display: flex;
@@ -8785,11 +8551,11 @@ button.plybtn img {
     color: #000;
 }
 
-.cstmCheckbox input:checked+label {
+.cstmCheckbox input:checked + label {
     color: #044783;
 }
 
-.cstmCheckbox input:checked+label:before {
+.cstmCheckbox input:checked + label:before {
     background: #044783;
     border-color: #044783;
 }
@@ -8810,7 +8576,7 @@ button.plybtn img {
 .searchStudent .form-control {
     font-size: 13px;
     height: 40px;
-    background: #F7F7F7;
+    background: #f7f7f7;
     border-radius: 4px;
     border: none;
     padding-right: 40px;
@@ -8837,8 +8603,8 @@ button.plybtn img {
 }
 
 .assignTb .nav-link {
-    background: #F5F5F5;
-    border: 1px solid #E2E2E2;
+    background: #f5f5f5;
+    border: 1px solid #e2e2e2;
     border-radius: 6px;
     font-size: 12px;
     position: relative;
@@ -8848,8 +8614,8 @@ button.plybtn img {
 
 .nav-tabs.assignTb .nav-item.show .nav-link,
 .nav-tabs.assignTb .nav-link.active {
-    background: #BFEFD4;
-    border-color: #BFEFD4;
+    background: #bfefd4;
+    border-color: #bfefd4;
 }
 
 .assignTb .nav-link:before {
@@ -8861,12 +8627,12 @@ button.plybtn img {
     width: 18px;
     height: 18px;
     margin: auto;
-    border: 1px solid #C4C4C4;
+    border: 1px solid #c4c4c4;
     border-radius: 100px;
 }
 
 .assignTb .nav-link.active:before {
-    border-color: #00BE55;
+    border-color: #00be55;
 }
 
 .assignTb .nav-link.active:after {
@@ -8879,7 +8645,7 @@ button.plybtn img {
     height: 8px;
     margin: auto;
     border-radius: 100px;
-    background: #00BE55;
+    background: #00be55;
 }
 
 .assignedTo .cstmCheckbox label {
@@ -8890,8 +8656,8 @@ button.plybtn img {
     padding: 7px;
 }
 
-.assignedTo .cstmCheckbox input:checked+label:after {
-    content: '';
+.assignedTo .cstmCheckbox input:checked + label:after {
+    content: "";
     display: block;
     position: absolute;
     top: 2px;
@@ -8904,10 +8670,10 @@ button.plybtn img {
 }
 
 .completedbg {
-    background-color: #CCF2DD;
+    background-color: #ccf2dd;
     border-radius: 4px;
     padding: 6px 10px;
-    color: #2C896C;
+    color: #2c896c;
     min-width: 90px;
     display: block;
     text-align: center;
@@ -8918,7 +8684,6 @@ button.plybtn img {
 .textReview .btn-secondary {
     min-width: 75px;
     padding: 6px 10px;
-
 }
 
 .textReview .btn-success,
@@ -8931,13 +8696,13 @@ button.plybtn img {
 }
 
 .ongoingbg {
-    background-color: #FCE7F5;
+    background-color: #fce7f5;
     border-radius: 4px;
     padding: 6px 10px;
     min-width: 90px;
     display: block;
     text-align: center;
-    color: #864A63;
+    color: #864a63;
 }
 
 .detailsTbl tr td:first-child {
@@ -8954,28 +8719,27 @@ button.plybtn img {
 .descriptionTxt {
     font-size: 12px;
     padding: 10px;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
 }
 
 .questionsBx {
     padding: 20px 20px;
-    background-color: #F2F3F7;
+    background-color: #f2f3f7;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
 .questionsBx strong {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #044783;
     font-weight: 600;
     font-size: 12px;
     padding: 5px 12px;
     border-radius: 4px;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     margin-bottom: 16px;
     display: inline-block;
-
 }
 
 .questionsBx p,
@@ -8984,14 +8748,14 @@ button.plybtn img {
     font-weight: 600;
 }
 
-.questionsUl>li {
+.questionsUl > li {
     font-size: 13px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
-.questionsUl>li span {
+.questionsUl > li span {
     margin-right: 20px;
 }
 
@@ -9011,12 +8775,12 @@ button.plybtn img {
     height: 40px;
     font-size: 12px;
     border-radius: 4px;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     font-weight: 500;
 }
 
 .badgeCorrect {
-    background-color: #00BE55;
+    background-color: #00be55;
     color: #fff;
     font-size: 13px;
     padding: 8px 16px;
@@ -9025,7 +8789,7 @@ button.plybtn img {
 }
 
 .badgeinCorrect {
-    background-color: #EE3131;
+    background-color: #ee3131;
     color: #fff;
     font-size: 13px;
     padding: 8px 16px;
@@ -9036,14 +8800,14 @@ button.plybtn img {
 .answer {
     padding: 10px;
     background-color: #fff;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     border-radius: 8px;
     font-weight: 400 !important;
     font-size: 12px !important;
 }
 
 .score {
-    border: 1px solid #50A2EB !important;
+    border: 1px solid #50a2eb !important;
 }
 
 .toggleSwitch {
@@ -9051,8 +8815,8 @@ button.plybtn img {
     width: 130px;
     height: 45px;
     position: relative;
-    background: #FFFFFF;
-    border: 1px solid #E7E7E7;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
     border-radius: 100px;
     cursor: pointer;
 }
@@ -9063,12 +8827,10 @@ button.plybtn img {
     height: 0;
 }
 
-
-
 .toggleSwitch .conditionOn {
     position: absolute;
     font-size: 13px;
-    color: #BA363B;
+    color: #ba363b;
     top: 12px;
     left: 17px;
     opacity: 0;
@@ -9079,7 +8841,7 @@ button.plybtn img {
 .toggleSwitch .conditionOff {
     position: absolute;
     font-size: 13px;
-    color: #00BE55;
+    color: #00be55;
     right: 17px;
     top: 12px;
     transition: 0.4s ease-in-out;
@@ -9095,7 +8857,7 @@ button.plybtn img {
     width: 36px;
     height: 36px;
     background-image: url(../images/right-white-icon.svg);
-    background-color: #00BE55;
+    background-color: #00be55;
     border-radius: 50%;
     z-index: 2;
     transition: 0.4s ease-in-out;
@@ -9112,17 +8874,17 @@ button.plybtn img {
     transition: 0.4s ease-in-out;
 }
 
-.toggleSwitch input:checked+.move {
+.toggleSwitch input:checked + .move {
     left: calc(100% - 40px);
-    background-color: #BA363B;
+    background-color: #ba363b;
     transform: rotate(180deg);
 }
 
-.toggleSwitch input:checked~.conditionOff {
+.toggleSwitch input:checked ~ .conditionOff {
     opacity: 0;
 }
 
-.toggleSwitch input:checked~.conditionOn {
+.toggleSwitch input:checked ~ .conditionOn {
     opacity: 1;
 }
 
@@ -9133,23 +8895,23 @@ button.plybtn img {
     max-width: 750px;
 }
 
-.questionPaper .questionsUl>li {
+.questionPaper .questionsUl > li {
     width: 50%;
     padding: 10px;
 }
 
-.questionPaper .questionsUl>li span {
+.questionPaper .questionsUl > li span {
     margin-right: 30px;
     margin-left: 5px;
 }
 
 .cstmcheck label {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #D2D2D2;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d2d2d2;
     border-radius: 4px;
     padding: 12px 15px 12px 45px;
     display: block;
-    color: #403E3E;
+    color: #403e3e;
     position: relative;
     cursor: pointer;
 }
@@ -9164,19 +8926,19 @@ button.plybtn img {
     width: 18px;
     height: 18px;
     border-radius: 100px;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
 }
 
-.cstmcheck input:checked+label {
-    background: #C0E8D6 0% 0% no-repeat padding-box;
-    border: 1px solid #D2D2D2;
+.cstmcheck input:checked + label {
+    background: #c0e8d6 0% 0% no-repeat padding-box;
+    border: 1px solid #d2d2d2;
 }
 
-.cstmcheck input:checked+label:before {
-    border-color: #00BE55;
+.cstmcheck input:checked + label:before {
+    border-color: #00be55;
 }
 
-.cstmcheck input:checked+label:after {
+.cstmcheck input:checked + label:after {
     content: "";
     position: absolute;
     top: 0;
@@ -9186,15 +8948,15 @@ button.plybtn img {
     height: 10px;
     margin: auto;
     border-radius: 100px;
-    background: #00BE55;
+    background: #00be55;
 }
 
-.cstmcheck input[type="checkbox"]+label:before {
+.cstmcheck input[type="checkbox"] + label:before {
     border-radius: 1px;
 }
 
-.cstmcheck input[type="checkbox"]:checked+label:after {
-    content: ' \F633';
+.cstmcheck input[type="checkbox"]:checked + label:after {
+    content: " \F633";
     font-family: bootstrap-icons !important;
     display: block;
     position: absolute;
@@ -9208,8 +8970,8 @@ button.plybtn img {
     color: #fff;
 }
 
-.cstmcheck input[type="checkbox"]:checked+label:before {
-    background-color: #00BE55;
+.cstmcheck input[type="checkbox"]:checked + label:before {
+    background-color: #00be55;
 }
 
 .textfieldAns {
@@ -9219,7 +8981,7 @@ button.plybtn img {
 
 .textfieldAns textarea.form-control {
     height: 100px;
-    border: 1px solid #D2D2D2;
+    border: 1px solid #d2d2d2;
     border-radius: 4px;
     font-size: 13px;
     resize: none;
@@ -9227,7 +8989,7 @@ button.plybtn img {
 
 .classDetail p {
     font-size: 12px;
-    color: #ADABAB;
+    color: #adabab;
 }
 
 .testPaperDetail {
@@ -9235,17 +8997,14 @@ button.plybtn img {
     top: 80px;
 }
 
-
 .paperListtbl tr:nth-child(even) {
-    background-color: #F8F8F8;
-
+    background-color: #f8f8f8;
 }
 
 .paperListtbl tr th {
     color: #707070 !important;
-    background-color: #F5F4FC;
+    background-color: #f5f4fc;
     border: none;
-
 }
 
 .paperListtbl tr td {
@@ -9263,7 +9022,6 @@ button.plybtn img {
     border-radius: 0 4px 4px 0;
 }
 
-
 .questionsStatus {
     display: flex;
     align-items: center;
@@ -9271,41 +9029,38 @@ button.plybtn img {
     margin: -5px;
 }
 
-.questionsStatus>li {
+.questionsStatus > li {
     width: 16%;
     text-align: center;
     padding: 5px;
-    color: #00438C;
+    color: #00438c;
     font-weight: 500;
 }
 
-.questionsStatus>li span {
+.questionsStatus > li span {
     width: 34px;
     height: 34px;
-    border: 1px solid #00BE55;
+    border: 1px solid #00be55;
     border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00BE55;
+    color: #00be55;
     font-size: 12px;
 }
 
 .questionsSts .text-success {
-    color: #00BE55 !important;
-
+    color: #00be55 !important;
 }
 
 .attemptQus {
-    background-color: #00BE55;
+    background-color: #00be55;
     color: #fff !important;
 }
 
 /*TPG End*/
 
-
-
-@media (min-width:1400px) {
+@media (min-width: 1400px) {
     .gallerySmallImg img {
         height: 200px;
     }
@@ -9313,16 +9068,12 @@ button.plybtn img {
     .galleryBigImg img {
         height: 416px;
     }
-
-
 }
 
-@media (min-width:1200px) {
-
+@media (min-width: 1200px) {
     .mainBanner:hover .bgIcons1 {
         top: 250px;
         right: 300px;
-
     }
 
     .mainBanner:hover .bgIcons2 {
@@ -9424,12 +9175,9 @@ button.plybtn img {
     .open-sidebar .dashboardMain {
         padding-left: 15px;
     }
-
-
 }
 
-@media (min-width:992px) {
-
+@media (min-width: 992px) {
     .programAccordion {
         display: flex;
         gap: 10px;
@@ -9447,18 +9195,18 @@ button.plybtn img {
         cursor: pointer;
         transform: rotate(180deg);
         writing-mode: vertical-rl;
-        background: #E5F4EC;
+        background: #e5f4ec;
         font-size: 14px;
-        color: #30C768;
+        color: #30c768;
         font-weight: 500;
         padding: 20px 25px;
         border: none;
         border-radius: 10px;
-        transition: .35s all;
+        transition: 0.35s all;
     }
 
     .programAccordion .card .card-header[aria-expanded="true"] {
-        background: #30C768;
+        background: #30c768;
         color: #fff;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -9473,7 +9221,7 @@ button.plybtn img {
     }
 
     .programContent {
-        background: #30C768;
+        background: #30c768;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         position: relative;
@@ -9509,22 +9257,22 @@ button.plybtn img {
     .ongoingBx {
         width: 100%;
     }
-
-
 }
 
-@media (min-width:768px) {
-
+@media (min-width: 768px) {
     .sayAboutSlider .item.slick-slide {
         transform: scale(0.7) translate(640px);
     }
 
-    .sayAboutSlider .item.slick-slide.slick-center+.slick-slide {
+    .sayAboutSlider .item.slick-slide.slick-center + .slick-slide {
         transform: scale(0.8) translate(-250px);
         z-index: 10;
     }
 
-    .sayAboutSlider .item.slick-slide.slick-center+.slick-slide+.item.slick-slide {
+    .sayAboutSlider
+        .item.slick-slide.slick-center
+        + .slick-slide
+        + .item.slick-slide {
         transform: scale(0.7) translate(-640px);
         z-index: 5;
     }
@@ -9553,12 +9301,9 @@ button.plybtn img {
     .profileTabs .nav-link {
         padding: 12px 20px;
     }
-
-
 }
 
-@media (max-width:1199px) {
-
+@media (max-width: 1199px) {
     .bgIcons1,
     .bgIcons2,
     .bgIcons3,
@@ -9602,19 +9347,18 @@ button.plybtn img {
         width: calc(100% - 175px);
     }
 
-    .mySubjects>li {
+    .mySubjects > li {
         width: 25%;
     }
-
 }
 
-@media (min-width:1500px) {
+@media (min-width: 1500px) {
     .footerMain {
         padding-top: 240px;
     }
 }
 
-@media (min-width:992px) and (max-width:1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .mainHeader .navbar-nav .nav-item {
         padding: 10px 15px;
     }
@@ -9638,10 +9382,9 @@ button.plybtn img {
     .registerBtn {
         display: none;
     }
-
 }
 
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .navbar-brand img {
         width: 130px;
     }
@@ -9707,7 +9450,7 @@ button.plybtn img {
         justify-content: start;
     }
 
-    .listingStar>li {
+    .listingStar > li {
         width: 33.33%;
     }
 
@@ -9747,7 +9490,7 @@ button.plybtn img {
         display: none;
     }
 
-    .sliderAbout .item>img {
+    .sliderAbout .item > img {
         height: 40vh;
     }
 
@@ -9830,7 +9573,7 @@ button.plybtn img {
         padding: 10px;
     }
 
-    .popularList>li {
+    .popularList > li {
         width: 50%;
     }
 
@@ -9854,7 +9597,7 @@ button.plybtn img {
         display: none;
     }
 
-    .cartsImag .imageMain>img {
+    .cartsImag .imageMain > img {
         height: 365px;
     }
 
@@ -9880,24 +9623,24 @@ button.plybtn img {
         height: auto;
     }
 
-    #pastTab .teacherOnline>li {
+    #pastTab .teacherOnline > li {
         width: 33.33%;
     }
 
     /*Student Panel Css*/
-    .navList>li {
+    .navList > li {
         margin: 0 8px;
     }
 
-    .navList>li a {
+    .navList > li a {
         font-size: 12px;
     }
 
-    .mySubjects>li {
+    .mySubjects > li {
         width: 33.33%;
     }
 
-    .danceChep .chapterList>li {
+    .danceChep .chapterList > li {
         width: 33.33%;
     }
 
@@ -9905,13 +9648,12 @@ button.plybtn img {
         display: none;
     }
 
-    .slider-explore-thumb .exploreconTent>figure img {
+    .slider-explore-thumb .exploreconTent > figure img {
         height: 150px !important;
-
     }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
     .navbar-brand img {
         width: 130px;
     }
@@ -9930,7 +9672,7 @@ button.plybtn img {
         width: 100%;
         height: 100% !important;
         background: #f6f6ee;
-        transition: .3s all;
+        transition: 0.3s all;
     }
 
     #navbarContent.show {
@@ -10201,10 +9943,8 @@ button.plybtn img {
         padding: 20px;
     }
 
-
-
     .aboutMain::after,
-    .sliderAbout .item>img {
+    .sliderAbout .item > img {
         height: 40vh;
     }
 
@@ -10214,7 +9954,6 @@ button.plybtn img {
         right: 0;
         transform: translate(0, -40%);
         padding: 0 15px;
-
     }
 
     .bannerTxt br {
@@ -10247,7 +9986,7 @@ button.plybtn img {
         margin: -35px 15px 40px;
     }
 
-    .listingStar>li {
+    .listingStar > li {
         width: 50%;
         padding-left: 19px;
         padding-right: 5px;
@@ -10269,7 +10008,6 @@ button.plybtn img {
     .studentSaySlider {
         padding: 0;
     }
-
 
     .programAccordion {
         display: block;
@@ -10317,8 +10055,6 @@ button.plybtn img {
     .visionSection {
         margin: 40px 0;
     }
-
-
 
     .articalBlog figure.blogImg img {
         height: 220px;
@@ -10446,7 +10182,6 @@ button.plybtn img {
 
     .sendForm img {
         height: 300px;
-
     }
 
     .contactBanner .bannerTxt h1 {
@@ -10505,7 +10240,7 @@ button.plybtn img {
         padding: 10px;
     }
 
-    .popularList>li {
+    .popularList > li {
         width: 100%;
     }
 
@@ -10544,7 +10279,7 @@ button.plybtn img {
         padding: 20px 0 0;
     }
 
-    .coursesBox>figure>img {
+    .coursesBox > figure > img {
         height: 220px;
     }
 
@@ -10624,7 +10359,6 @@ button.plybtn img {
 
     .accordianInner b {
         margin-top: 10px;
-
     }
 
     .curriculumAcrdn .accordion-body {
@@ -10710,7 +10444,7 @@ button.plybtn img {
         left: 0;
         width: 100%;
         padding: 10px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, .07);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.07);
         background: #fff;
         border: none;
         border-radius: 0;
@@ -10767,7 +10501,7 @@ button.plybtn img {
         padding-top: 10px;
     }
 
-    .digitalBox figure>img {
+    .digitalBox figure > img {
         height: 180px;
     }
 
@@ -10833,11 +10567,9 @@ button.plybtn img {
         margin-right: auto !important;
     }
 
-    .docxList>li {
+    .docxList > li {
         width: 50%;
     }
-
-
 
     #scheduledTab .ScheduleList li {
         width: 100%;
@@ -10846,7 +10578,6 @@ button.plybtn img {
     #ongoingTab .teacherOnline li {
         width: 100%;
     }
-
 
     .schedulContent figure img {
         height: 180px;
@@ -10860,7 +10591,6 @@ button.plybtn img {
         display: block !important;
     }
 
-
     #upcomingTab .upcomingList .upcomingImg img {
         width: 100%;
         max-width: 100%;
@@ -10870,7 +10600,6 @@ button.plybtn img {
     .upcomingList .upcomingtxt {
         margin-left: 0;
         padding: 10px 10px;
-
     }
 
     .upcomingList .upcomingtxt a {
@@ -10878,7 +10607,7 @@ button.plybtn img {
         display: block;
     }
 
-    .pastUl>li .upcomingImg img {
+    .pastUl > li .upcomingImg img {
         width: 100%;
         max-width: 100%;
     }
@@ -10986,8 +10715,8 @@ button.plybtn img {
         margin-bottom: 10px;
     }
 
-    #pastTab .teacherOnline>li,
-    #upcomingTab .teacherOnline>li {
+    #pastTab .teacherOnline > li,
+    #upcomingTab .teacherOnline > li {
         width: 100%;
     }
 
@@ -11006,8 +10735,10 @@ button.plybtn img {
         right: -100%;
         width: 100%;
         height: calc(100% - 51px);
-        background: transparent linear-gradient(255deg, #00438C 0%, #0853B1 49%, #1265DA 100%) 0% 0% no-repeat padding-box;
-        transition: .5s all;
+        background: transparent
+            linear-gradient(255deg, #00438c 0%, #0853b1 49%, #1265da 100%) 0% 0%
+            no-repeat padding-box;
+        transition: 0.5s all;
     }
 
     .studentNav.show {
@@ -11025,31 +10756,31 @@ button.plybtn img {
         display: block;
     }
 
-    .navList>li a {
+    .navList > li a {
         padding: 10px;
         display: block;
     }
 
-    .navList>li a.active:after {
+    .navList > li a.active:after {
         display: none;
     }
 
-    .studentinfoList>li {
+    .studentinfoList > li {
         width: 100%;
         border: none;
-        border-bottom: 1px solid rgba(152, 180, 205, .27) !important;
+        border-bottom: 1px solid rgba(152, 180, 205, 0.27) !important;
         padding: 15px 0;
     }
 
-    .studentinfoList>li:last-child {
+    .studentinfoList > li:last-child {
         border-bottom: 0 !important;
     }
 
-    .mySubjects>li {
+    .mySubjects > li {
         width: 50%;
     }
 
-    .danceChep .chapterList>li {
+    .danceChep .chapterList > li {
         width: 100%;
     }
 
@@ -11066,15 +10797,11 @@ button.plybtn img {
     }
 }
 
-
-
 @media (max-width: 375px) {
-    .coursesBox>figure>img {
+    .coursesBox > figure > img {
         height: 170px;
     }
 }
-
-
 
 /* switch bottomToggleBtn toggler style */
 .bottomToggleBtn {
@@ -11087,13 +10814,12 @@ button.plybtn img {
     border-radius: 100px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     gap: 10px;
     -webkit-animation: glowing 1500ms infinite;
     -moz-animation: glowing 1500ms infinite;
     -o-animation: glowing 1500ms infinite;
     animation: glowingGradient 2s infinite;
-
 }
 
 .front-download-tooltip {
@@ -11121,27 +10847,34 @@ button.plybtn img {
     visibility: visible;
 }
 
-
 @keyframes glowingGradient {
     0% {
-        box-shadow: 0 0 5px #00438C, 0 0 10px #00438C;
+        box-shadow:
+            0 0 5px #00438c,
+            0 0 10px #00438c;
     }
 
     25% {
-        box-shadow: 0 0 10px #00438C, 0 0 20px #00BE55;
+        box-shadow:
+            0 0 10px #00438c,
+            0 0 20px #00be55;
     }
 
     50% {
-        box-shadow: 0 0 15px #00BE55, 0 0 30px #00438C;
+        box-shadow:
+            0 0 15px #00be55,
+            0 0 30px #00438c;
     }
 
     75% {
-        box-shadow: 0 0 10px #00438C, 0 0 25px #00BE55;
+        box-shadow:
+            0 0 10px #00438c,
+            0 0 25px #00be55;
     }
 
     100% {
-        box-shadow: 0 0 5px #00BE55, 0 0 10px #00438C;
+        box-shadow:
+            0 0 5px #00be55,
+            0 0 10px #00438c;
     }
-
-    
 }

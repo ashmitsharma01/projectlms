@@ -23,7 +23,7 @@ class UserMgtController extends Controller
 
     public function studentManager(Request $request)
     {
-        $library_id               = Library::where('user_id',Auth::id())->value('id');
+        $library_id               = Library::where('user_id', Auth::id())->value('id');
         $query = Student::where('library_id', $library_id)->with(['user', 'userRole']);
         if ($request->filled('status')) {
             $query->where('status', 'like', '%' . $request->status . '%');
