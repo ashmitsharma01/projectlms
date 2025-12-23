@@ -4,6 +4,7 @@ namespace App\Http\Controllers\libraryPortal;
 
 use App\Http\Controllers\Controller;
 use App\Models\Library;
+use App\Models\Payment;
 use App\Models\Role;
 use App\Models\SchoolClass;
 use App\Models\Section;
@@ -153,5 +154,14 @@ class UserMgtController extends Controller
         } catch (\Exception $e) {
             return response()->json(['status' => 'error'], 500);
         }
+    }
+
+    public function lastPayment(Request $request)
+    {
+        $payment = Payment::where('student_user_id', $request->user_id)
+            ->latest()
+            ->first();
+
+        return response()->json($payment);
     }
 }

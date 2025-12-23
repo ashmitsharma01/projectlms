@@ -224,6 +224,69 @@ class FeesMgtController extends Controller
         }
     }
 
+    public function renewFeesSave(Request $request)
+    {
+        // dd($request->all());
+        DB::beginTransaction();
+        try {
+            $request->validate([
+                'student_id'   => 'required|exists:users,id',
+                'start_date'   => 'required|date',
+                'end_date'     => 'required|date|after_or_equal:start_date',
+                'amount'       => 'required|numeric|min:0',
+                'payment_mode' => 'required|in:cash,upi,card',
+            ]);
+
+            $library = Library::where('user_id', Auth::id())->firstOrFail();
+            if ($request->student_id) {
+                $student = Student::where('user_id', $request->student_id)->first();
+                if ($student && $student->is_new == 1) {
+                    $student->update([
+                        'is_new' => 0
+                    ]);
+                } elseif ($student && $student->is_renew == 1) {
+                    $student->update([
+                        'is_renew' => 0
+                    ]);
+                }
+            }
+
+            Payment::create(
+                [
+                    'library_id'   => $library->id,
+                    'student_user_id'  => $request->student_id,
+                    'amount'       => $request->amount,
+                    'start_date'   => $request->start_date,
+                    'end_date'     => $request->end_date,
+                    'payment_date' => now()->toDateString(),
+                    'mode'         => $request->payment_mode,
+                ]
+            );
+            SeatAssignment::updateOrCreate(
+                [
+                    'user_id' => $request->student_id,
+                ],
+                [
+                    'start_date'   => $request->start_date,
+                    'end_date'     => $request->end_date,
+                ]
+            );
+            DB::commit();
+            return redirect()
+                ->route('fees.dashboard')
+                ->with('success', $request->payment_id ? 'Fees updated successfully' : 'Fees collected successfully');
+        } catch (ValidationException $e) {
+            DB::rollBack();
+            return redirect()->back()
+                ->withErrors($e->validator)
+                ->withInput();
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->back()
+                ->with('error', config('constants.FLASH_TRY_CATCH'));
+        }
+    }
+
     public function userPaymentHistory(Request $request)
     {
         $libraryID = Library::where('user_id', Auth::id())->value('id');

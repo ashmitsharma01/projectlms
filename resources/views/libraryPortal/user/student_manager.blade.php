@@ -163,7 +163,7 @@
                                                     </button>
                                                 @elseif ($student->is_renew == 1)
                                                     <button type="button"
-                                                        class="btn btn-outline-danger btn-sm px-3 blink-danger"
+                                                        class="btn btn-outline-danger btn-sm px-3 blink-danger renewFeesBtn"
                                                         data-id="{{ $student->user_id }}"
                                                         data-name="{{ $student->name }}">
                                                         Renew Fees
@@ -211,41 +211,6 @@
             </div>
         </div>
     </div>
-
-
-    {{-- <div class="modal fade" id="studentInactive">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0 align-items-baseline">
-                    <div>
-                        <h6 class="modal-title fw-semibold">Inactive Student</h6>
-                        <p>Enter inactive date for changing the status of student from active to Inactive.</p>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pt-0">
-                    <div class="">
-                        <div class="formPanel">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group bginput mb-3">
-                                        <label>Enter Date</label>
-                                        <input type="text" class="form-control dateBirth" value="Select date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary-gradient rounded-1">Submit</button>
-                                <div>
-                                    <button type="button" class="btn btnNo">Back</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     <div class="modal fade" id="collectFeesModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -332,6 +297,72 @@
         </div>
     </div>
 
+    <div class="modal fade" id="renewFeesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title fw-semibold">Renew Fees</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form action="{{ route('renew.fees.save') }}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+                        <input type="hidden" name="student_id" id="renew_student_id">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Student</label>
+                                <select id="renew_student_select" class="form-select" disabled>
+                                    <option value="">Select Student</option>
+                                    @foreach ($students as $student)
+                                        <option value="{{ $student->user_id }}">
+                                            {{ $student->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label">Start Date</label>
+                                <input type="date" name="start_date" id="renew_start_date" class="form-control"
+                                    required>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label">End Date</label>
+                                <input type="date" name="end_date" id="renew_end_date" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Amount</label>
+                                <input type="number" name="amount" id="renew_amount" class="form-control"
+                                    placeholder="Enter amount" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Payment Mode</label>
+                                <select name="payment_mode" id="renew_payment_mode" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="upi">UPI</option>
+                                    <option value="card">Card</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary-gradient rounded-1">
+                            Renew
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 
     <script>
         document.addEventListener("click", function(e) {
@@ -397,6 +428,41 @@
                 "{{ \Carbon\Carbon::now()->toDateString() }}";
             document.getElementById('end_date').value =
                 "{{ \Carbon\Carbon::now()->addMonth()->toDateString() }}";
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.renewFeesBtn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const userId = this.dataset.id;
+                console.log('User ID:', userId);
+                document.getElementById('renew_student_select').value = userId;
+                document.getElementById('renew_student_id').value = userId;
+                const today = new Date();
+                const nextMonth = new Date();
+                nextMonth.setMonth(today.getMonth() + 1);
+                document.getElementById('renew_start_date').value =
+                    today.toISOString().split('T')[0];
+                document.getElementById('renew_end_date').value =
+                    nextMonth.toISOString().split('T')[0];
+
+                document.getElementById('renew_amount').value = '';
+                document.getElementById('renew_payment_mode').value = '';
+                fetch(`{{ route('student.last.payment') }}?user_id=${userId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log('Payment Data:', data);
+
+                        if (data) {
+                            document.getElementById('renew_amount').value = data.amount;
+                            document.getElementById('renew_payment_mode').value = data.mode;
+                        }
+                    });
+
+                new bootstrap.Modal(
+                    document.getElementById('renewFeesModal')
+                ).show();
+            });
         });
     </script>
 @endsection

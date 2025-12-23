@@ -38,6 +38,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('student/edit/{id}', 'studentEdit')->name('student.edit');
         Route::get('student/delete/{id}', 'studentDelete')->name('student.delete');
         Route::post('student/save', 'userSave')->name('sp.student.save');
+        Route::get('/student/last-payment', 'lastPayment')
+            ->name('student.last.payment');
     });
     Route::controller(SeatMgtController::class)->group(function () {
         Route::get('seat/list', 'index')->name('seat.index');
@@ -50,11 +52,16 @@ Route::middleware(['auth'])->group(function () {
         Route::get('fees/dashboard', 'dashboard')->name('fees.dashboard');
         Route::get('collect/fees', 'collectFees')->name('collect.fees');
         Route::get('collect-fees/edit/{id}', 'editCollectFees')->name('collect.fees.edit');
-
         Route::post('collect/fees', 'collectFeesSave')->name('collect.fees.save');
+        Route::post('renew/fees', 'renewFeesSave')->name('renew.fees.save');
         Route::get('user/payment/history', 'userPaymentHistory')->name('user.payment.history');
-        // Route::get('seat/edit/{id}', 'seatEdit')->name('seat.edit');
-        // Route::get('seat-assignment/delete/{id}', 'deleteSeatAssignment')->name('seat.assignment.delete');
-        // Route::post('seat/save', 'seatSave')->name('seat.save');
     });
+
+    Route::post('/notifications/{id}/read', function ($id) {
+        auth()->user()->notifications()->where('id', $id)->update([
+            'read_at' => now()
+        ]);
+
+        return response()->json(['success' => true]);
+    })->name('notifications.read');
 });
